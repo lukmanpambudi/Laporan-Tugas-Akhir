@@ -1,0 +1,81 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: laporan.aux
+Reallocating 'name_of_file' (item size: 1) to 7 items.
+The style file: newapa.bst
+Reallocating 'name_of_file' (item size: 1) to 22 items.
+A level-1 auxiliary file: untouch/xx-sampul.aux
+Reallocating 'name_of_file' (item size: 1) to 27 items.
+A level-1 auxiliary file: untouch/xx-sampuldalam.aux
+Reallocating 'name_of_file' (item size: 1) to 15 items.
+A level-1 auxiliary file: a2-abstrak.aux
+Reallocating 'name_of_file' (item size: 1) to 16 items.
+A level-1 auxiliary file: a3-abstract.aux
+Reallocating 'name_of_file' (item size: 1) to 26 items.
+A level-1 auxiliary file: untouch/xx-pernyataan.aux
+Reallocating 'name_of_file' (item size: 1) to 27 items.
+A level-1 auxiliary file: untouch/xx-persetujuan.aux
+Reallocating 'name_of_file' (item size: 1) to 26 items.
+A level-1 auxiliary file: untouch/xx-pengesahan.aux
+Reallocating 'name_of_file' (item size: 1) to 19 items.
+A level-1 auxiliary file: a4-persembahan.aux
+Reallocating 'name_of_file' (item size: 1) to 21 items.
+A level-1 auxiliary file: a5-katapengantar.aux
+Reallocating 'name_of_file' (item size: 1) to 22 items.
+A level-1 auxiliary file: untouch/xx-daftar.aux
+Reallocating 'name_of_file' (item size: 1) to 12 items.
+A level-1 auxiliary file: b1-bab1.aux
+Reallocating 'name_of_file' (item size: 1) to 12 items.
+A level-1 auxiliary file: b2-bab2.aux
+Reallocating 'name_of_file' (item size: 1) to 12 items.
+A level-1 auxiliary file: b3-bab3.aux
+Reallocating 'name_of_file' (item size: 1) to 12 items.
+A level-1 auxiliary file: b4-bab4.aux
+Reallocating 'name_of_file' (item size: 1) to 12 items.
+A level-1 auxiliary file: b5-bab5.aux
+Reallocating 'name_of_file' (item size: 1) to 11 items.
+Database file #1: a7-pustaka.bib
+Warning--I didn't find a database entry for "anggraeni2004sistem"
+Warning--I didn't find a database entry for "bai2023automated"
+You've used 9 entries,
+            2708 wiz_defined-function locations,
+            658 strings with 6787 characters,
+and the built_in function-call counts, 4250 in all, are:
+= -- 376
+> -- 230
+< -- 5
++ -- 87
+- -- 87
+* -- 439
+:= -- 848
+add.period$ -- 27
+call.type$ -- 9
+change.case$ -- 81
+chr.to.int$ -- 9
+cite$ -- 9
+duplicate$ -- 139
+empty$ -- 242
+format.name$ -- 104
+if$ -- 740
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 8
+newline$ -- 48
+num.names$ -- 36
+pop$ -- 51
+preamble$ -- 1
+purify$ -- 91
+quote$ -- 0
+skip$ -- 100
+stack$ -- 0
+substring$ -- 238
+swap$ -- 34
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 54
+warning$ -- 0
+while$ -- 37
+width$ -- 0
+write$ -- 119
+(There were 2 warnings)

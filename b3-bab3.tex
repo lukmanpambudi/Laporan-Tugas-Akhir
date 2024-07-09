@@ -1,0 +1,243 @@
+%==================================================================
+% Ini adalah bab 3
+% Silahkan edit sesuai kebutuhan, baik menambah atau mengurangi \section, \subsection
+%==================================================================
+
+\chapter[KONSEP RANCANGAN / PRODUK / JASA / EVALUASI / PENGUJIAN]{\\ KONSEP RANCANGAN / PRODUK / JASA / EVALUASI / PENGUJIAN}
+
+\section{Waktu dan Tempat Penelitian}
+Penelitian tugas akhir berjudul "Deteksi jalur Antar Tanaman Cabai Untuk Navigasi Robot Penyemprot Pestisida Menggunakan Mask R-CNN" dimulai sejak Juli 2023 hingga November
+2023. Penelitian ini dilaksanakan di Universitas Negeri Yogyakarta Kampus Wates, yang berada Kabupaten Kulon Progo, Daerah Istimewa Yogyakarta dan Dusun Terbah, Desa Terbah, Kecamatan Patuk, Kabupaten Gunungkidul, Daerah Istimewa Yogyakarta.
+
+\section{Tahapan Penelitian}
+Pada penelitian ini terdapat terdapat tahapan yang digambarkan pada  \cref{fig:flowchart} flowchart pada dibawah ini. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.6	]{tahap_penelitian}
+	\caption{Flowchart Tahap Penelitian}
+	\label{fig:flowchart}
+\end{figure}
+
+\begin{packed_enum}
+	\item Studi Literatur: Pada tahap ini dilakukan pencarian dan analisis terhadap literatur yang relevan dengan topik atau latar belakang penelitian. Tujuan tahap ini bertujuan untuk menemukan dasar teori, memahami metode penelitian sebelumnya untuk dikembangkan sesuai topik penelitian, dan Mengumpulkan data dan bukti pendukung untuk mendukung argumen dan analisis dalam penelitian.
+	\item Identifikasi Kebutuhan: Identifikasi kebutuhan diperlukan untuk menganalisa dan mempersiapkan kebutuhan yang dibutuhkan pada penelitian. Pada tahap ini identifikasi kebutuhan dibagai menjadi 3 yaitu, identifikasi kubutuhan hardware, kebutuhan software, dan alat.
+	\item Perancangan Hardware dan Software: Tahap perancangan hardware dibagi menjadi 2 tahap yaitu perancangan mekanik dan elektronik. Perancangan mekanik dilakukan dengan pembuatan desain robot. Perancangan elektronik berupa arsitektur sistem robot. Sementara perancangan software adalah persiapan pemasangan library yang dibutuhkan pada saat proses inference NVDIA Jetson Nano.
+	\item Implementasi: tahap ini merupakan kegiatan pembuatan hardware robot sesuai dengan desain yang sudah ditentukan menggunakan kebutuhan bahan dan alat yang sudah disiapkan. sementara implementasi software meliputi pelatihan model, pembuatan kode program yang diperlukan.
+	\item Integrasi Sistem: Pada tahap ini rancangan hardware dan software digabungkan agar dapat saling berkomunikasi. Pengujian ini juga bertujuan untuk mengetahui sistem kerja, fungsional dan keamanan sistem.
+	\item Pengujian Sistem: Tahap pengujian dilakukan untuk mengetahui dan memastikan bahwa sistem pada robot dapat bekerja dengan baik sesuai kebutuhan. 
+\end{packed_enum}
+
+\section{Identifikasi Kebutuhan}
+Tahap penelitian setelah melakukan studi literatur adalah identifikasi kebutuhan untuk memenuhi kebutuhan sumber daya yang diperlukan sesuai dengan yang dibutuhkan. Identifikasi kebutuhan pada penelitian ini terbagi menjadi 3, yaitu kebutuhan hardware pada \cref{tab:kebutuhanhardware}, kebutuhan software pada \cref{tab:kebutuhan-soft}, dan kebutuhan alat \cref{tab:kebutuhan-alat}
+
+\subsection{Kebutuhan Hardware}
+% \usepackage{array}
+% \usepackage{longtable}
+
+
+\begin{longtable}{|>{\hspace{0pt}}m{0.046\linewidth}|>{\hspace{0pt}}m{0.25\linewidth}|>{\hspace{0pt}}m{0.627\linewidth}|}
+	\caption{Kebutuhan \textit{Hardware}\label{tab:kebutuhanhardware}}\\
+	\hline
+	\multicolumn{1}{|>{\centering\hspace{0pt}}m{0.042\linewidth}|}{\textbf{No}} & \multicolumn{1}{>{\centering\hspace{0pt}}m{0.271\linewidth}|}{\textbf{Nama Hardware}} & \multicolumn{1}{>{\centering\arraybackslash\hspace{0pt}}m{0.627\linewidth}|}{\textbf{Keterangan}}                                              \endfirsthead 
+	\hline
+	\multicolumn{3}{|>{\centering\arraybackslash\hspace{0pt}}m{0.94\linewidth}|}{\textbf{Komponen Mekanik Robot}}                                                                                                                                                                                                        \\ 
+	\hline
+	1                                                                           & Aluminium profile 3030                                                                & Digunakan untuk membuat rangka bagian bawah\par{}atau rangka utama.                                                                            \\ 
+	\hline
+	2                                                                           & Aluminium profile 2020                                                                & Digunakan untuk membuat rangka bagian atas.                                                                                                    \\ 
+	\hline
+	3                                                                           & Besi As                                                                               & Memiliki panjang 500mm dan diameter 20mm.\par{}berfungsi sebagai struktur utama yang menahan\par{}berat robot dan beban muatannya.             \\ 
+	\hline
+	4                                                                           & Bracket corner aluminium                                                              & Berfungsi untuk menopang atau memperkuat\par{}sudut pada sebuah struktur.                                                                      \\ 
+	\hline
+	5                                                                           & Rantai Mini GP 25H TEBAL-\par{}HEAVY DUTY                                             & Memiliki fungsi utama mentransmisikan daya\par{}dari motor dc ke roda robot.                                                                   \\ 
+	\hline
+	6                                                                           & Gear Mini GP - 51T                                                                    & Kompenen penggerak roda, dan berfungsi untuk\par{}mentransmisikan daya dari motor dc.                                                          \\ 
+	\hline
+	7                                                                           & Velg ATV Ring 6 Inch                                                                  & Sebagai komponen penggerak robot.                                                                                                              \\ 
+	\hline
+	8                                                                           & Ban Luar ATV Ring 6 - 4.10\par{}offroad dan ban dalam ATV\par{}ing 6 ukuran 4.10-6.   & Sebagai komponen penggerak robot.                                                                                                              \\ 
+	\hline
+	9                                                                           & Junction Box PVC (200mm\par{}x 120mm x 75mm)                                          & Berfungsi sebagai tempat penyimpanan komponen\textbackslash{}\textbackslash{} elektronik.                                                      \\ 
+	\hline
+	10                                                                          & Kabel Gland\par{}(Diameter 5-10mm)                                                    & Sebagai pengaman kabel yang masuk ke dalam\par{}Junction Box PVC.                                                                              \\ 
+	\hline
+	11                                                                          & Jerigen 20L                                                                           & Berfungsi untuk menampung pestisida.                                                                                                           \\ 
+	\hline
+	12                                                                          & Selang                                                                                & Berfungsi untuk membagi dan menyalurkan cairan\par{}pestisida ke sprayer.                                                                      \\ 
+	\hline
+	13                                                                          & Nozzle Sprayer                                                                        & Berfungsi mendistribusikan cairan pestisida\par{}secara merata dan efisien.                                                                    \\ 
+	\hline
+	\multicolumn{3}{|>{\centering\arraybackslash\hspace{0pt}}m{0.94\linewidth}|}{\textbf{Komponen Elektronik Robot}}                                                                                                                                                                                                     \\ 
+	\hline
+	14                                                                          & Motor DC MY1016Z\par{}250W 24V                                                        & Sebagai komponen penggerak utama untuk\par{}menggerakkan robot.                                                                                \\ 
+	\hline
+	15                                                                          & Baterai Pack LiFePO4\par{}24V 20Ah                                                    & Sebagai sumber daya untuk motor dc                                                                                                             \\ 
+	\hline
+	16                                                                          & Baterai Lifepo4 12V                                                                   & Sebagai sumber daya komponen utama elektronik.                                                                                                 \\ 
+	\hline
+	17                                                                          & ACCU/Aki Kering                                                                       & Sebagai sumber daya pompa 12V.                                                                                                                 \\ 
+	\hline
+	18                                                                          & ESP32 Devkit-V1                                                                       & Sebagai mikrokontroller yang mengendalkan\par{}seluruh operasi robot dan yang utama untuk\par{}mengendalikan kecepatan motor dc.               \\ 
+	\hline
+	19                                                                          & Driver Motor IBT-2~\par{}BTS 7960                                                     & Berfungsi untuk mengatur kecepatan motor dc.                                                                                                   \\ 
+	\hline
+	20                                                                          & NVIDIA Jetson Nano                                                                    & Sebagai platform yang digunakan untuk melakukan\par{}proses image processing.                                                                  \\ 
+	\hline
+	21                                                                          & Relay                                                                                 & Digunakan untuk mengendalikan arus yang masuk\par{}ke pompa 12V.                                                                               \\ 
+	\hline
+	22                                                                          & Pompa 12V                                                                             & Digunakan untuk menciptakan aliran fluida atau\par{}menggerakkan cairan dari jerigen ke nozzle sprayer.                                        \\ 
+	\hline
+	23                                                                          & USB Webcam 2K                                                                         & \}Berfungsi untuk mendeteksi objek dan\par{}lingkungan sekitar robot untuk diproses \textbackslash{}\textbackslash{} pada NVIDIA Jetson Nano.  \\ 
+	\hline
+	24                                                                          & MicroSD 128GB                                                                         & Digunakan sebagi media penyimpanan data\par{}yang diperlukan NVIDIA Jetson Nano.                                                               \\
+	\hline
+\end{longtable}
+
+
+\subsection{Kebutuhan Software}
+
+\begin{table}[H]
+	\caption{Kebutuhan Software}
+	\label{tab:kebutuhan-soft}
+	\centering
+	\begin{tabular}{|l|l|l|}
+		\hline
+		\multicolumn{1}{|c|}{\textbf{No}} &
+		\multicolumn{1}{c|}{\textbf{Nama Software}} &
+		\multicolumn{1}{c|}{\textbf{Keterangan}} \\ \hline
+		1 &
+		Autodesk Inventor &
+		\begin{tabular}[c]{@{}l@{}}Software yang berfungsi untuk membuat\\ mekanik berupa desain 3D robot.\end{tabular} \\ \hline
+		2 & Arduino IDE & \begin{tabular}[c]{@{}l@{}}Digunakan untuk memprogram dan mengembangkan\\ proyek dengan papan  mikrokontroler Arduino \\ dengan bahasa C++.\end{tabular} \\ \hline
+		3 &
+		Visual Studio Code &
+		\begin{tabular}[c]{@{}l@{}}Sebagai software untuk mengembangkan program \\ Mask R-CNN.\end{tabular} \\ \hline
+	\end{tabular}
+\end{table}
+
+\subsection{Kebutuhan Alat}
+
+\begin{table}[H]
+	\caption{Kebutuhan Alat}
+	\label{tab:kebutuhan-alat}
+	\centering
+	\begin{tabular}{|l|l|l|}
+		\hline
+		\multicolumn{1}{|c|}{\textbf{No}} &
+		\multicolumn{1}{c|}{\textbf{Nama Alat}} &
+		\multicolumn{1}{c|}{\textbf{keterangan}} \\ \hline
+		1 &
+		Laptop &
+		\begin{tabular}[c]{@{}l@{}}Digunakan untuk melakukan perancangan secara\\ keseluruhan (hardware dan software).\end{tabular} \\ \hline
+		2 &
+		\begin{tabular}[c]{@{}l@{}}Mesin pemotong besi\\ dan kikir\end{tabular} &
+		\begin{tabular}[c]{@{}l@{}}Digunakan untuk mempermudah pemotongan \\ aluminium profile sesuai kebutuhan.\end{tabular} \\ \hline
+		3 &
+		\begin{tabular}[c]{@{}l@{}}Solder, timah, dan \\ aktraktor\end{tabular} &
+		\begin{tabular}[c]{@{}l@{}}Peralatan digunakan untuk membuat dan \\ mengembangkan komponen elektronik.\end{tabular} \\ \hline
+		4 &
+		Multimeter &
+		\begin{tabular}[c]{@{}l@{}}Digunakan untuk mengukur nilai dan mengecek\\ pada komponen elektronik robot.\end{tabular} \\ \hline
+		5 &
+		Mesin bor tangan &
+		\begin{tabular}[c]{@{}l@{}}Digunakan untuk mebuat lubang terutama \\ pada frame robot, dan lain-lain.\end{tabular} \\ \hline
+		6 &
+		Tang &
+		\begin{tabular}[c]{@{}l@{}}Sebagai alat perkakas, mempermudah pemotongan\\ kabel dan lain-lain.\end{tabular} \\ \hline
+	\end{tabular}
+\end{table}
+
+\section{Rancangan Hardware}
+Tahap rancangan hardware pada penelitian ini dibagi menjadi 2, yaitu rancangan mekanik berupa desain robot, dan rancangan elektronik berupa desain atau rancangan arsitektur sistem.
+
+\subsection{Rancangan Mekanik}
+Rancangan mekanik robot menggunakan software AutoDesk Inventor untuk merancang dan membuat desain 3D robot. Pada \cref{fig:mekanik-utama} Robot menggunakan bahan alumunium profile berukuran 30x30  sebagai bahan utama frame robot, dan alumunium profile berukuran 20x20 sebagai bahan penunjang frame seperti bagian tiang sprayer dan bagian tempat jerigen. Dimensi robot memiliki panjang 750mm dan lebar 600mm. Frame utama robot menggunakan aluminium profile 30x30 (30mm x 30mm), dipilih sebagai bahan utama frame karena mempunyai kemampuan untuk menopang beban berat, kuat, dan beratnya yang ringan. Aluminium profile juga tahan karat, mudah untuk dirangkai sesuai ukuran dan kebutuhan robot.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.4]{main_mekanik}
+	\caption{Gambar Desian Mekanik Robot}
+	\label{fig:mekanik-utama}
+\end{figure}
+
+Aluminium profile 20x20 (20mm x 20mm) digunakan untuk bahan frame penunjang seperti tiang sprayer dan frame tempat jerigen. Aluminium profile 20x20 dipilih karena ukuranya yang sesuai kebutuhan yaitu tidak memerlukan ukuran yang terlalu besar. Terdiri dari 2 tinag sprayer, mempunyai ketinggan minimum 75mm dan maksimum 200mm yang dapat diatur ketinggianya sesuai kebutuhan. Robot ini mempunayi total 4 nozzle sprayer,  setiap tiang sprayer terdapat 2 nozzle yang terintegrasi dengan jerigen penampungan pestisida. Pada penelitian ini robot menggunakan 2 Motor DC MY1016Z-250W 24V untuk menggerakkan 4 roda sebagai penggerak utama, dimana setaip roda belakan dan depan terhubung dengan rantai untuk menghindari slip di tanah.
+
+\subsection{Rancangan Elektronik}
+Pada \cref{fig:arsitektur-diagram} dibawah ini adalah Arsitektur sistem elektronik yang merujuk pad struktur keseluruhan dari komponen-komponen elektronik yang membentuk sebuah sistem. Arsitektur sistem rancangan elektronik mencangkup perancangan dan pengaturan bagaimana komponen-komponen tersebut saling berinteraksi dan berkomunikasi satu sama lain untuk mencapai fungsi-fungsi tertentu. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.4]{arsitektur-diagram}
+	\caption{Gambar Arsitektur Rancangan Elektronik}
+	\label{fig:arsitektur-diagram}
+\end{figure}
+
+Pada penelitian ini arsitektur sistem dibagai menjadi 3 bagaian. Bagian pertama adalah power source, bagian ini terdiri dari beberapa sumber daya atau supply untuk komponen elektronik. Bagaian arsitektur power source terdiri dari 3 battery antara lain, Accu 12V 5Ah digunakan untuk memberikan daya pada pompa pada bagian sistem sprayer. LiFePo 24V 2Ah berfungsi untuk memberikan daya pada Motor DC MY1016Z-250W 24V. Yang ketiga Li-Po battery 11.1V 3.3A, battery ini diturunkan menggunakan Ubec 5V 3A digunakan sebagai sumber daya untuk ESP32 DevKit V1. 
+
+Bagaian kedua arsitektur sistem pada penelitian ini adalah image processing system yang terdiri dari NVDIA Jetson Nano dan WebCam. NVDIA Jetson nano merupakan unit utama yang berfungsi untuk melakukan proses image processing dan Webcam sebagai input untuk merekam keadaan lingkungan sekitar robot. NVIDIA Jetson Nano disupply tegangan sebesar 5V 4A. Arsitekstur bagaian ketiga adalah Control System, terdiri dari ESP32 DevKit V1 sebagai mikrokontroller yang terhubung dengan NVIDIA Jetson Nano melalui komunikasi serial. ESP32 DevKit V1 diprogram menggunakan bahasa pemrograman C untuk menerima data dan mmemberikan kotrol pada aktuaktor seperti motor dc dan pompa. 
+
+\section{Rancangan Software}
+Perancangan software atau perangkat lunak  dalam penelitian ini memiliki peranan yang krusial dalam memaksimalkan kemampuan dan proses pada perangkat keras yang digunakan. Ini disebabkan karena perangkat lunak yang dirancang secara cermat akan dapat mengoptimalkan fitur-fitur dan sumber daya yang tersedia pada perangkat keras sehingga membutuhkan beberapa library sebagai berikut:
+
+\begin{packed_enum}
+	\item OpenCV: merupakan library perangkat lunak open source yang dikhususkan untuk pengolahan gamabar dan visual komputer. OpenCV menyediakan berbagai fungsi dan algoritma yang digunakan untuk mendeteksi dan mengenali objek, melakukan analisa gambar dan mengolah vidio. OpenCV juga memiliki integrasi dengan berbagai algoritma kecerdasan buatan, seperti machine learning dan pengenalan pola, yang memungkinkan aplikasi untuk melakukan tugas-tugas yang lebih kompleks.
+	\item NumPy: Merupakan library perangkat lunak open source yang menggunakan bahasa pemrograman python, menyediakan dukungan untuk array dan matriks multidimensi bersama dengan koleksi besar fungsi matematika tingkat tinggi untuk bekerja dengan data. 
+	\item Detectron2: Merupakan library perangkat lunak open source  yang dikembangkan oleh Facebook AI Research (FAIR) yang bertujuan untuk menyederhanakan dan mempercepat pengembangan sistem deteksi objek dan segmentasi gambar berbasis deep learning. Detectron2 dibangun di atas framework PyTorch dan menyediakan implementasi dari berbagai model dan algoritma terkini dalam bidang penglihatan komputer.
+	\item Torch: Merupakan library perangkat lunak open source  yang digunakan untuk pengembangan dan implementasi jaringan saraf serta implementasi bahasa pemrograman Python yang dikenal sebagai PyTorch. Torch digunakan secara luas dalam penelitian kecerdasan buatan dan industri, termasuk dalam pengembangan model untuk pengenalan gambar, pemrosesan bahasa alami, pengenalan suara, dan banyak lagi. Kemampuannya untuk mengintegrasikan dengan baik dengan Python melalui PyTorch telah membuatnya menjadi salah satu pilihan utama bagi para peneliti dan praktisi dalam pengembangan dan penelitian di bidang kecerdasan buatan.
+	\item Time: Library "time" adalah salah satu library standar dalam bahasa pemrograman Python yang digunakan untuk melakukan operasi terkait waktu. Library ini menyediakan berbagai fungsi yang memungkinkan pengguna untuk bekerja dengan waktu, termasuk pengukuran waktu, penjadwalan, dan manipulasi waktu.
+	\item Roboflow: Roboflow adalah platform pengelolaan data dan pelatihan model untuk proyek visualisasi komputer. Ini dirancang untuk membantu pengembang dan peneliti dalam mengelola, mengolah, dan memanfaatkan data citra untuk melatih model penglihatan komputer dengan lebih efisien. 
+\end{packed_enum}
+
+\section{Rancangan Sistem}
+Pada penelitian ini terdapat \cref{fig:diagramsistem} rancangan sistem yang berisi alur sistem  kerja robot untuk bernavigasi dengan mendeteksi jalur antra tanaman pada perkebunan cabai.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.6]{diagram-sistem}
+	\caption{Gambar Diagram sistem program}
+	\label{fig:diagramsistem}
+\end{figure}
+
+Berdsarkan \cref{fig:diagramsistem} diatas, sistem program robot penyemprot pestisida mempunyai 4 proses utama yaitu: 
+
+
+\subsection{Persiapan dan Pembuatan Dataset}
+Persiapan dan pembuatan dilakukan secara mandiri, dataset berupa foto yang diambil di kebun cabai sesuai kebutuhan, \cref{fig:alurdataset} berikut ini tahapan pembuatan dataset menggunakan platform roboflow:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.6]{alur-dataset}
+	\caption{Gambar Tahap Pembuatan Dataset}
+	\label{fig:alurdataset}
+\end{figure}
+
+\begin{packed_item}
+	\item Pengumpulan data: pengumpulan dataset berupa foto perkebunan cabai dengan fokus objek berupa jarak antar tanaman (row crop) sebagai objeknya. Data dalam bentuk foto tersebut akan digunakan untuk melatih algoritma Mask R-CNN.
+	\item Anotasi Data: Anotasi atau pelabelan objek berupa jarak antar tanaman (row crop) pada perkebunan cabai, pelabelan pada objek pada foto dilakukan terdiri dari 3 kelas yaitu maju, belok kanan, dan belok kiri dengan id kelas yang berbeda.
+	\item pembagian Data: Foto yang sudah dianotasi kemudian dibagi menjadi 3 bagian yaitu, train, validation dan test. Pembagian ini penting untuk menghindari overfitting dan memastikan
+	model dapat digeneralisasi dengan baik.
+	\item Export dataset: Setelah dataset dibagi menjadi 3 bagian, kemudiaan adalah mengekspor dataset sesuai kebutuhan. Algoritma Mask R-CNN dengan menggunakan Pytorch dan Detectron2 menggunakan dataset dengan format COCO, berisi file gambar dan file json.
+\end{packed_item}
+
+\subsection{Training Dataset}
+Dataset yang dihasilkan roboflow terdiri dari input dan output yang berpasangan, di mana model Mask R-CNN (machine learning) akan menggunakan input untuk mempelajari pola atau hubungan antara input dan output yang sesuai. Tujuan utama dari menggunakan training dataset adalah untuk menghasilkan model yang dapat membuat prediksi atau keputusan yang akurat ketika diberikan input baru yang tidak pernah dilihat sebelumnya. Training dataset menggunakan platform google colab berbasis cloud yang disediakan oleh Google. 
+\subsection{Deploy Trained Model}
+Pada tahap ini model yang sudah dilatih menggunakan dataset akan dijalankan pada NVIDIA Jetson Nano. Untuk menjalankan model Mask R-CNN memerlukan persiapan berupa pemasangan beberapa library yang sudah dibahas pada bagain sub bab rancangan software.
+\subsection{Pengiriman Data dan Hasil Perhitungan}
+Tahap terakhir adalah pengiriman data dari proses image processing pada NVIDIA Jetson Nano menggunakan komunikasi serial. Data dapat berupa perhitungan pixel dari objek yang di segmentasi, dimana hasil perhitungan tersebut akan menentukan kecepatan motor dc untuk bernavigasi.
+
+\section{Rancangan Pengujian}
+\subsection{pengujian Algoritma Mask R-CNN pada Gambar}
+Pengujian model Mask R-CNN dilakukan dengan menggunakan gambar yang bersumber dari dataset. Suatu Gambar dapat memiliki 1 hingga 2 kelas dari total 3 kelas dengan id yang berbeda. Pengujian dilakukan menggunakan platform Google Colab. Model yang digunakan adalah Mask R-CNN yang dilatih menggunakan frame work Pytorch dan Detectron2. Tujuan pengujian model pada gambar untuk mengetahui performa model untuk mendeteksi objek dan instance segmantation. 
+
+\subsection{Pengujian Algoritma Mask R-CNN di Lapangan}
+Tahap terakhir pengujian dilakukan di kebun cabai yang diilustrasikan pada \cref{fig:ilustrasiuji}  Pengujian secara langsung dilakukan dengan tujuan untuk mengetahui fungsinal dan sistem pada robot dapat bekerja dengan baik. Pengujian menggunkan menggunakan WebCam sebagai input NVIDIA Jetson Nano. WebCam berfungsi untuk mendeteksi keadaan lingkungan di sekitar robot. Pada Pengujian ini NCVDIA Jetson Nano akan mengolah data atau melakukan image processing, gambar akan diolah oleh algoritma Mask R-CNN untuk dideteksi objek dan instance segmantation. Hasil image processing inilah akan dihitung lebar pixel, data dari perhitungan tersebut akan dikirim ke ESP32 yang untuk menentukan navigasi robot dengan mengatur putaran motor dc.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.1]{ilustrasi-pengujian}
+	\caption{Gambar Ilustrasi Pengujian Robot}
+	\label{fig:ilustrasiuji}
+\end{figure}

@@ -1,0 +1,92 @@
+\babel@toc {indonesian}{}\relax 
+\contentsline {chapter}{HALAMAN SAMPUL}{i}{Doc-Start}%
+\contentsline {chapter}{ABSTRAK}{ii}{section*.1}%
+\contentsline {chapter}{ABSTRACT}{iii}{section*.2}%
+\contentsline {chapter}{SURAT PERNYATAAN}{iv}{section*.2}%
+\contentsline {chapter}{LEMBAR PERSETUJUAN}{v}{table.caption.3}%
+\contentsline {chapter}{HALAMAN PENGESAHAN}{vi}{table.caption.3}%
+\contentsline {chapter}{HALAMAN PERSEMBAHAN}{vii}{section*.5}%
+\contentsline {chapter}{KATA PENGANTAR}{viii}{section*.6}%
+\contentsline {chapter}{DAFTAR ISI}{ix}{section*.7}%
+\contentsline {chapter}{DAFTAR SINGKATAN}{xii}{section*.8}%
+\contentsline {chapter}{DAFTAR GAMBAR}{xiii}{section*.10}%
+\contentsline {chapter}{DAFTAR TABEL}{xiv}{section*.11}%
+\contentsline {chapter}{\numberline {1}PENDAHULUAN}{1}{chapter.1}%
+\contentsline {section}{\numberline {A.\hspace {0.18cm}}Latar Belakang Masalah}{1}{section.1.1}%
+\contentsline {section}{\numberline {B.\hspace {0.18cm}}Identifikasi Masalah}{3}{section.1.2}%
+\contentsline {section}{\numberline {C.\hspace {0.18cm}}Batasan Masalah}{4}{section.1.3}%
+\contentsline {section}{\numberline {D.\hspace {0.18cm}}Rumusan Masalah}{4}{section.1.4}%
+\contentsline {section}{\numberline {E.\hspace {0.18cm}}Tujuan}{5}{section.1.5}%
+\contentsline {section}{\numberline {F.\hspace {0.18cm}}Manfaat}{5}{section.1.6}%
+\contentsline {section}{\numberline {G.\hspace {0.18cm}}Keaslian Gagasan}{6}{section.1.7}%
+\contentsline {chapter}{\numberline {2}PENDEKATAN PEMECAHAN MASALAH}{8}{chapter.2}%
+\contentsline {section}{\numberline {A.\hspace {0.18cm}}Row Crop}{8}{section.2.1}%
+\contentsline {section}{\numberline {B.\hspace {0.18cm}}Artificial Intelligence/AI}{9}{section.2.2}%
+\contentsline {subsection}{\numberline {1.}Lapisan Data}{9}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.}Kerangka kerja Machine Learning/ML dan lapisan algoritma}{10}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {3.}Lapisan Model}{10}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {4.}Lapisan Aplikasi}{11}{subsection.2.2.4}%
+\contentsline {section}{\numberline {C.\hspace {0.18cm}}Machine Learning}{11}{section.2.3}%
+\contentsline {subsection}{\numberline {1.}Supervised machine learning}{12}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.}Unsupervised machine learning}{12}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {3.}Semi-supervised learning}{13}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {4.}Reinforcement learning}{13}{subsection.2.3.4}%
+\contentsline {section}{\numberline {D.\hspace {0.18cm}}Deep Learning}{14}{section.2.4}%
+\contentsline {section}{\numberline {E.\hspace {0.18cm}}Computer Vision}{15}{section.2.5}%
+\contentsline {section}{\numberline {F.\hspace {0.18cm}}YOLOv8}{15}{section.2.6}%
+\contentsline {section}{\numberline {G.\hspace {0.18cm}}Fuzzy Logic}{16}{section.2.7}%
+\contentsline {section}{\numberline {H.\hspace {0.18cm}}NVIDIA Jetson Nano}{17}{section.2.8}%
+\contentsline {section}{\numberline {I.\hspace {0.18cm}}ESP32 DevKit V1}{18}{section.2.9}%
+\contentsline {section}{\numberline {J.\hspace {0.18cm}}Kamera}{20}{section.2.10}%
+\contentsline {section}{\numberline {K.\hspace {0.18cm}}Driver Motor IBT-2 BTS7960}{21}{section.2.11}%
+\contentsline {section}{\numberline {L.\hspace {0.18cm}}Motor DC MY1016Z-250W 24V}{22}{section.2.12}%
+\contentsline {chapter}{\numberline {3}KONSEP RANCANGAN / PRODUK / JASA / EVALUASI / PENGUJIAN}{24}{chapter.3}%
+\contentsline {section}{\numberline {A.\hspace {0.18cm}}Waktu dan Tempat Penelitian}{24}{section.3.1}%
+\contentsline {section}{\numberline {B.\hspace {0.18cm}}Tahapan Penelitian}{24}{section.3.2}%
+\contentsline {section}{\numberline {C.\hspace {0.18cm}}Identifikasi Kebutuhan}{26}{section.3.3}%
+\contentsline {subsection}{\numberline {1.}Kebutuhan Hardware}{26}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {2.}Kebutuhan Software}{28}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.}Kebutuhan Alat}{29}{subsection.3.3.3}%
+\contentsline {section}{\numberline {D.\hspace {0.18cm}}Rancangan Hardware}{29}{section.3.4}%
+\contentsline {subsection}{\numberline {1.}Rancangan Mekanik}{29}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {2.}Rancangan Elektronik}{31}{subsection.3.4.2}%
+\contentsline {section}{\numberline {E.\hspace {0.18cm}}Rancangan Software}{32}{section.3.5}%
+\contentsline {section}{\numberline {F.\hspace {0.18cm}}Rancangan Sistem}{33}{section.3.6}%
+\contentsline {subsection}{\numberline {1.}Persiapan dan Pembuatan Dataset}{34}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {2.}Training Dataset}{35}{subsection.3.6.2}%
+\contentsline {subsection}{\numberline {3.}Deploy Trained Model}{35}{subsection.3.6.3}%
+\contentsline {subsection}{\numberline {4.}Pengiriman Data dan Hasil Perhitungan}{35}{subsection.3.6.4}%
+\contentsline {section}{\numberline {G.\hspace {0.18cm}}Rancangan Pengujian}{36}{section.3.7}%
+\contentsline {subsection}{\numberline {1.}pengujian Algoritma Mask R-CNN pada Gambar}{36}{subsection.3.7.1}%
+\contentsline {subsection}{\numberline {2.}Pengujian Algoritma Mask R-CNN di Lapangan}{36}{subsection.3.7.2}%
+\contentsline {chapter}{\numberline {4}PROSES, HASIL, PEMBAHASAN}{38}{chapter.4}%
+\contentsline {section}{\numberline {A.\hspace {0.18cm}}Section 4.1}{38}{section.4.1}%
+\contentsline {subsection}{\numberline {1.}Subsection 4.1.1}{39}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {2.}Subsection 4.1.2}{39}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {3.}Subsection 4.1.3}{39}{subsection.4.1.3}%
+\contentsline {section}{\numberline {B.\hspace {0.18cm}}Section 4.2}{39}{section.4.2}%
+\contentsline {subsection}{\numberline {1.}Subsection 4.2.1}{39}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {2.}Subsection 4.2.2}{39}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {3.}Subsection 4.2.3}{39}{subsection.4.2.3}%
+\contentsline {section}{\numberline {C.\hspace {0.18cm}}Section 4.3}{39}{section.4.3}%
+\contentsline {subsection}{\numberline {1.}Subsection 4.4.1}{40}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {2.}Subsection 4.4.2}{40}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {3.}Subsection 4.3.3}{40}{subsection.4.3.3}%
+\contentsline {section}{\numberline {D.\hspace {0.18cm}}Section 4.4}{40}{section.4.4}%
+\contentsline {subsection}{\numberline {1.}Subsection 4.4.1}{40}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {2.}Subsection 4.4.2}{40}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {3.}Subsection 4.4.3}{40}{subsection.4.4.3}%
+\contentsline {section}{\numberline {E.\hspace {0.18cm}}Section 4.5}{40}{section.4.5}%
+\contentsline {subsection}{\numberline {1.}Subsection 4.5.1}{40}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {2.}Subsection 4.5.2}{41}{subsection.4.5.2}%
+\contentsline {subsection}{\numberline {3.}Subsection 4.5.3}{41}{subsection.4.5.3}%
+\contentsline {chapter}{\numberline {5}SIMPULAN DAN SARAN}{42}{chapter.5}%
+\contentsline {section}{\numberline {A.\hspace {0.18cm}}Simpulan}{42}{section.5.1}%
+\contentsline {section}{\numberline {B.\hspace {0.18cm}}Saran}{43}{section.5.2}%
+\contentsline {chapter}{DAFTAR PUSTAKA}{45}{section*.32}%
+\contentsline {chapter}{LAMPIRAN A KODE PROGRAM}{46}{appendix*.34}%
+\contentsline {section}{\numberline {}Lampiran A.1. Program Pembacaan Sensor Ultrasonic}{46}{section*.35}%
+\contentsline {section}{\numberline {}Lampiran A.2. Program Keseluruhan Proyek Akhir}{46}{lstnumber.-1.15}%
+\contentsline {chapter}{LAMPIRAN B GAMBAR-GAMBAR}{47}{appendix*.36}%
+\contentsline {section}{\numberline {}Lampiran B.1. Foto Aktivitas Kegiatan Proyek Akhir}{47}{section*.37}%
+\contentsline {section}{\numberline {}Lampiran B.2. Foto Produk Proyek Akhir}{47}{figure.caption.38}%

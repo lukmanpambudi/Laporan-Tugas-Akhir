@@ -1,0 +1,111 @@
+%==================================================================
+% Ini adalah bab 1
+% Silahkan edit sesuai kebutuhan, baik menambah atau mengurangi \section, \subsection
+%==================================================================
+
+\chapter[PENDAHULUAN]{\\ PENDAHULUAN}
+
+\section{Latar Belakang Masalah}
+Pertanian adalah aktivitas yang melibatkan pemanfaatan sumber daya hayati oleh manusia untuk memproduksi bahan pangan dan bahan baku industri guna memenuhi kebutuhan hidup. Cabai adalah salah satu komoditas hortikultura yang memiliki nilai ekonomi signifikan di Indonesia \cite{gulo2023identifikasi}. Cabai adalah tanaman yang adaptif, dapat tumbuh di dataran tinggi maupun rendah, dan sangat cocok dibudidayakan di berbagai daerah \cite{sumung2023strategi}.  Indonesia sendiri memiliki sumber daya alam yang kuat menopang perekonomian, terutama melalui sektor pertanian yang strategis. Cabai adalah komoditas hortikultura bernilai ekonomi tinggi dengan permintaan besar, baik domestik maupun internasional. Namun, petani menghadapi tantangan seperti fluktuasi harga, produksi, faktor alam seperti cuaca dan hama, serta rendahnya adopsi teknologi dan efisiensi dalam pengelolaan sumber daya \cite{zamrodah2020pendapatan}. 
+
+Menurut Badan Pusat Statistika Indonesia yang tersaji pada \cref{fig:grafik-lombok} produksi cabai tahun 2019 hingga 2023. Pada tahun 2023, produksi cabai besar mencapai 1,55 juta ton, meningkat 5,33\% (78,67 ribu ton) dibandingkan tahun 2022. Sementara ada tahun 2023, produksi cabai rawit mencapai 1,51 juta ton, mengalami penurunan sebesar 2,44\% (37,68 ribu ton) dibandingkan tahun 2022. Salah satu penyebab fluktuasi produksi cabai adalah perawatan yang tidak sesuai standar dapat membuat tanaman cabai rentan terhadap hama dan penyakit, yang dapat mengakibatkan hasil panen rendah atau gagal panen. Hama utama yang menyerang tanaman cabai antara lain ulat grayak, kutu daun, thrips, tungau, dan lalat buah \cite{fitriani2020penerapan}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{lombok}
+	\caption{Grafik Produksi Cabai Rawit dan Besar di Indonesia}
+	\label{fig:grafik-lombok}
+\end{figure}
+
+Pada umumnya petani menggunakan pestisida untuk mengendalikan hama pada tanaman pertanian. Menurut Undang-Undang Republik Indonesia Nomor 22 tahun 2019 tentang sistem budi daya pertanian berkelanjutan, dalam pasal 75 disebutkan bahwa pestisida mencakup semua zat kimia, bahan lain, jasad renik, dan virus yang dapat digunakan untuk memberantas atau mencegah hama, binatang, rerumputan, atau tanaman yang tidak diinginkan. Penggunaan pestisida yang tidak sesuai dapat mengakibatkan dampak pada kesehatan, akibatnya dapat mengalami gejala keracunan seperti sesak napas, gangguan kulit, sakit kepala, mual muntah, jantung berdebar, nyeri otot, penglihatan kabur, diare, tremor, dan nyeri punggung \cite{ibrahim2022identifikasi}. Oleh karena itu, diperlukan sebuah pengembangan teknologi dibidang pertanian berupa robot otonom yang dapat melakukan penyemprotan pestisida yang efisien dan efektif. Sehingga dapat mengurangi dampak pestisida terhadap kesehatan petani.
+
+Seiring dengan perkembangan teknologi yang semakin maju, \textit{Artificial Intelligence}  dapat diterapkan pada bidang pertanian cabai. Pendekatan berbasis deep learning telah menjadi populer dalam beberapa tahun terakhir, terutama dalam aplikasi computer vision. Deep learning menggunakan neural network yang sangat dalam untuk mempelajari dan memprediksi pola dalam data, seperti gambar dan video. Model YOLO (You Only Look Once) adalah salah satu contoh pendekatan berbasis deep learning yang sangat efektif dalam deteksi objek. Kelebihan lainya dari model YOLO adalah Real-time Performance, YOLO dapat berjalan dalam waktu real-time, sehingga sangat cocok untuk aplikasi yang memerlukan respon cepat, Akurasi Tinggi, YOLO memiliki akurasi yang tinggi dalam deteksi objek, terutama bila dibandingkan dengan pendekatan "two-stage". Dengan demikian metode YOLO dapat digunakan dalam sistem kendaraan otonom untuk mendeteksi objek dan mengontrol gerakan kendaraan \cite{sirisha2023statistical}. Tepatnya Januari 2023 Ultralytics mengembangkan dan merilis YOLOv8 yang mempunyai beberapa versi salah satunya YOLO8n-seg. YOLOv8n-seg lebih sesuai digunakan untuk aplikasi yang membutuhkan proses prediksi cepat dan model yang ringkas, seperti yang sering diimplementasikan pada perangkat edge \cite{10348569}.
+
+Oleh karena itu, untuk mengurangi dampak pestisida terhadap kesehatan petani, inovasi pengembangan robot otonom  menggukan YOLO8n-seg untuk mendeteksi jalur berupa jarak antar tanaman cabai. Untuk menunjang penelitian ini robot  membutuhkan perangkat edge berupa NVIDIA Jetson Nano, Webcam untuk mendeteksi jalur. Untuk dapat bernavigasi secara otonom, robot juga menggunakan ESP32 dan Fuzzy Logic Controller untuk mengendalikan putaran roda pada robot untuk bernavigasi sesuai jalur. 
+
+\section{Identifikasi Masalah}
+Berdasarkan latar belakang permasalahan, dapat diidentifikasi masalah
+sebagai berikut :
+\begin{packed_enum}
+	\item Mengurangi bahaya dari paparan zat kimia pestisida.
+	\item Keterbatasan jarak pengoprasian navigasi robot dengan menggunakan remote control.
+	\item Perancangan navigasi otonom menggunkan sensor ultrasonic seperti HC-SR04 tidak efektif jika digunakan di luar ruangan, karena mempunyai keterbatasan jarak, interferensi akustik yang dapat menyebabkan kesalahan pengukuran.
+	\item Penggunaan GPS untuk navigasi memliki kekurangan akurasi posisi antara 5 hingga 10 meter. Selain itu penggunaan GPS tidak maksimal pada dinamika pergerakan, karena robot beroperasi di kebun cabai dengan keterbatasan ruang gerak.
+\end{packed_enum}
+
+\section{Batasan Masalah}
+Batasan masalah pada penelitian ini ditentukan agar fokus pada permasalahan
+yang dirumuskan dan tidak meluas, berikut adalah batasan-batasan masalah:
+\begin{packed_enum}
+	\item Sistem Robot Penyemprot Pestisida menggunakan NVIDIA Jetson Nano dan ESp32 sebagai perangkat utama pengolahan data. Robot di uji pada lahan pertanian cabai.
+	\item Pengujian robot dilakukakan di kebun cabai di tanah kering tanpa ada genangan air.
+	\item Kebun cabai tempat pengujian menggunakan mulsa plastik untuk memudahkan proses object detection dan segmentation.
+	\item Robot Penyemprot Pestisida tetap menggunakan remote control
+	sebagai switch untuk memilih mode navigasi secara manual atau otonom.
+	\item Menggunakan algoritma YOLOv8 untuk melakukan object detection dan instance segmentation jalur pada jarak antar tanaman cabai.
+	\item Navigasi robot secara otonom menggunakan Fuzzy Logic Controller untuk mengendalikan putaran da arah roda.
+\end{packed_enum}
+
+\section{Rumusan Masalah}
+Berdasarkan latar belakang yang telah diuraikan diatas, maka rumusan
+masalah dari penelitian ini adalah sebagai beriku:
+\begin{packed_enum}
+	\item Bagaimana merancang dan mengimplementasikan sistem navigasi otonom pada robot semprot pestisida yang mampu mendeteksi jalur di antara baris tanaman cabai menggunakan algoritma YOLOv8 instance segmentation?
+	\item Bagaimana memanfaatkan kemampuan komputasi dari Nvidia Jetson Nano untuk memproses data visual secara real-time dan mendukung kinerja algoritma YOLOv8 dalam kondisi lingkungan kebun yang dinamis dan beragam?
+	\item Bagaimana akurasi  algoritma YOLOv8 instance segmentation pada Nvidia Jetson Nano?
+	\item Bagaimana akurasi robot dalam bernavigasi secara otonom menggunakan algoritma YOLOv8 dan  fuzzy logic controller? 
+\end{packed_enum}
+
+\section{Tujuan}
+Berdasarkan permasalahan yang telah diuraikan diatas, penelitian ini
+memiliki beberapa tujuan yaitu :
+\begin{packed_enum}
+	\item Mengetahui akurasi model YOLOv8 untuk mendeteksi jaur pada  baris antar tanaman cabai.
+	\item Mengetahui performa  model YOLOv8 yang dijalankan didalam NVIDIA Jetson Nano pada robot penyemprot pestsida.
+	\item Mengembangkan sistem otonom pada robot penyemprot pestsida dengan mengimplementasikan algoritma YOLOv8 dan fuzzy logic controller.
+\end{packed_enum}
+
+\section{Manfaat}
+Skripsi atau proyek akhir memiliki manfaat yang sangat penting bagi mahasiswa dan lingkungan akademik, antara lain:
+
+\begin{packed_item}
+	\item Bagi Perguruan tinggi:
+	\begin{packed_enum}
+		\item Meningkatkan reputasi akademik, keberhasilan mahasiswa dalam
+		menyelesaikan proyek aatu tugas akhir dapat meningkatkan reputasi
+		akademik khusunya Teknik Elektronika. Hasil proyek atau tugas akhir yang signifikan dapat membantu meningkatkan citra dan standing institusi di tingkat nasional maupun internasional.
+		\item Proyek atau tugas akhir menjadi sebuah pengembangan kualitas pendidikan
+		pada perguruan tinggi. Hasil penelitian dari tugas akhir yang publikasi dapat
+		membantu memperkaya literatur ilmiah dan berpotensi memecahkan
+		masalah-masalah yang relevan.
+		\item Meningkatkan daya saing, perguruan tinggi yang menghasilkan penelitian
+		tugas akhir dari mahasiswa dapat meningkatkan daya saing perguruan tinggi
+		untuk komitmen terhadap keunggulan akademik dan penelitian.
+	\end{packed_enum}
+	\item Bagi Mahasiswa:
+	\begin{packed_enum}
+		\item Meningkatkan kemampuan akademik, melaui tugas akhir mahasiswa dapat
+		mengimplemetasikan ilmu yang sudah ditempuh selama perkuliahan.
+		Mahasiswa dapat mengembangkan keterampilan penelitian, termasuk
+		merancang penelitian, mengolah data, menganalisa hasil, dan menyusun
+		laporan secara sistematis dan terstruktur
+		\item Melalui proyek atau tugas akhir mahasiswa mendapatkan pemahaman yang
+		lebih mendalam tentang topik atau bidang studi tertentu. Mahasiswa dapat
+		memperluas pengetahuan yang diperoleh dari perkuliahan dan buku teks.
+		\item Proyek akhir atau tugas akhir memberikan mahasiswa untuk dapat mengasah
+		kemampuan analitis mereka melalui pengolahan data dan interpretasi hasil penelitian. Hal ini dapat membantu mereka menjadi pemikir kritis yang lebih
+		baik.
+	\end{packed_enum}
+\end{packed_item}
+
+\section{Keaslian Gagasan}
+Tugas Akhir dengan judul “Rancang Bangun Sistem Navigasi Otonom Pada Robot Semprot Pestisida menggunakan YOLOv8 dan Fuzzy Logic Controller” merupakan pengembangan alat dan metode yang sudah ada sebelumya. Penelitian yang dijadikan acuan adalah sebagai berikut:
+\begin{packed_enum}
+	\item Penelitian dengan judul "Rancang Bangun Robot Penyemprot Pestisida Otonom Dengan Sistem Wall-Follower Pada Penyemprotan Tanaman Cabai". Penelitian melibatkan perancangan dan pembuatan robot penyemprot pestisida otonom yang mampu menavigasi melalui bedengan dan melakukan penyemprotan pestisida secara otomatis pada tanaman cabai. Robot menggunakan mikrokontroler Arduino Uno sebagai pengontrol dan sensor ultrasonik HY-SRF05 untuk mendeteksi sisi kanan, kiri, depan, dan tanaman. \cite{budiono2021rancang}. Penelitian ini menggunakan Arduino Uno sehingga tidak memungkinkan untuk melakukan computer vision, dan penggunaan sensor ultrasonik HY-SRF05 kurang akurat jika digunakan di luar ruangan.
+	
+	\item Sebuah penelitian yang berjudul “Improved YOLOv8-Seg Network for Instance Segmentation of Healthy and Diseased Tomato Plants in the Growth Stage”. Penelitian tersebut mengembangkan Algoritma YOLOv8s-Seg untuk melakukan instance segmentation pada tanaman tomat yang sehat dan terinfeksi penyakit pada berbagai tahap pertumbuhan. Algoritma diimplementasikan menggunakan PyTorch dan diuji pada sistem Windows 10 CPU Intel(R) Platinum 8255C dan GPU Nvidia GeForce RTX 2080Ti dengan hasil Presisi 91.9\%, Recall: 85.8\%, F1 score: 88.7\%, Segment mAP@0.5: 0.922 \cite{agriculture13081643}. Penggunaan \textit{NVIDIA Jetson Nano} akan lebih efisien karena ukuran yang kecil yang dirancang khusus untuk aplikasi \textit{artificial intelligence}  dan \textit{machine learning}  di \textit{ edge devices}.
+	 
+	\item 
+	
+\end{packed_enum}
+Berdasarkan literatur dari kajian pustaka secara mendalam
