@@ -17,52 +17,52 @@ Menurut Badan Pusat Statistika Indonesia yang tersaji pada \cref{fig:grafik-lomb
 	\label{fig:grafik-lombok}
 \end{figure}
 
-Pada umumnya petani menggunakan pestisida untuk mengendalikan hama pada tanaman pertanian. Menurut Undang-Undang Republik Indonesia Nomor 22 tahun 2019 tentang sistem budi daya pertanian berkelanjutan, dalam pasal 75 disebutkan bahwa pestisida mencakup semua zat kimia, bahan lain, jasad renik, dan virus yang dapat digunakan untuk memberantas atau mencegah hama, binatang, rerumputan, atau tanaman yang tidak diinginkan. Penggunaan pestisida yang tidak sesuai dapat mengakibatkan dampak pada kesehatan, akibatnya dapat mengalami gejala keracunan seperti sesak napas, gangguan kulit, sakit kepala, mual muntah, jantung berdebar, nyeri otot, penglihatan kabur, diare, tremor, dan nyeri punggung \cite{ibrahim2022identifikasi}. Oleh karena itu, diperlukan sebuah pengembangan teknologi dibidang pertanian berupa robot otonom yang dapat melakukan penyemprotan pestisida yang efisien dan efektif. Sehingga dapat mengurangi dampak pestisida terhadap kesehatan petani.
+Pada umumnya petani menggunakan pestisida untuk mengendalikan hama pada tanaman pertanian. Pestisida mencakup semua zat kimia, bahan lain, jasad renik, dan virus yang dapat digunakan untuk memberantas atau mencegah hama, binatang, rerumputan, atau tanaman yang tidak diinginkan. Penggunaan pestisida yang tidak sesuai dapat mengakibatkan dampak pada kesehatan, akibatnya dapat mengalami gejala keracunan seperti sesak napas, gangguan kulit, sakit kepala, mual muntah, jantung berdebar \cite{ibrahim2022identifikasi}. Oleh karena itu, diperlukan sebuah pengembangan teknologi dibidang pertanian berupa robot \textit{otonom} yang dapat melakukan penyemprotan pestisida yang efisien dan efektif. Sehingga dapat mengurangi dampak pestisida terhadap kesehatan petani.
 
-Seiring dengan perkembangan teknologi yang semakin maju, \textit{Artificial Intelligence}  dapat diterapkan pada bidang pertanian cabai. Pendekatan berbasis deep learning telah menjadi populer dalam beberapa tahun terakhir, terutama dalam aplikasi computer vision. Deep learning menggunakan neural network yang sangat dalam untuk mempelajari dan memprediksi pola dalam data, seperti gambar dan video. Model YOLO (You Only Look Once) adalah salah satu contoh pendekatan berbasis deep learning yang sangat efektif dalam deteksi objek. Kelebihan lainya dari model YOLO adalah Real-time Performance, YOLO dapat berjalan dalam waktu real-time, sehingga sangat cocok untuk aplikasi yang memerlukan respon cepat, Akurasi Tinggi, YOLO memiliki akurasi yang tinggi dalam deteksi objek, terutama bila dibandingkan dengan pendekatan "two-stage". Dengan demikian metode YOLO dapat digunakan dalam sistem kendaraan otonom untuk mendeteksi objek dan mengontrol gerakan kendaraan \cite{sirisha2023statistical}. Tepatnya Januari 2023 Ultralytics mengembangkan dan merilis YOLOv8 yang mempunyai beberapa versi salah satunya YOLO8n-seg. YOLOv8n-seg lebih sesuai digunakan untuk aplikasi yang membutuhkan proses prediksi cepat dan model yang ringkas, seperti yang sering diimplementasikan pada perangkat edge \cite{10348569}.
+Seiring dengan perkembangan teknologi yang semakin maju, \textit{Artificial Intelligence}  dapat diterapkan pada bidang pertanian cabai. Pendekatan berbasis deep learning mengalami peningkatan dalam beberapa tahun terakhir, terutama dalam aplikasi \textit{computer vision}. \textit{Deep learning} menggunakan \textit{neural network}  untuk mempelajari dan memprediksi pola dalam data, seperti gambar dan video. Model \textit{YOLO (You Only Look Once)} adalah salah satu contoh pendekatan berbasis deep learning yang efektif dalam deteksi objek. Kelebihan lainya dari model \textit{YOLO} adalah \textit{Real-time Performance}, sehingga cocok untuk aplikasi yang memerlukan respon cepat, dan akurasi tinggi\cite{sirisha2023statistical}. Dengan demikian \textit{YOLO} dapat digunakan dalam sistem kendaraan otonom untuk mendeteksi objek dan mengontrol gerakan kendaraan. Tepatnya Januari 2023 \textit{Ultralytics} mengembangkan dan merilis \textit{YOLOv8} yang mempunyai beberapa versi salah satunya \textit{YOLO8n-seg}. \textit{YOLO8n-seg} lebih sesuai digunakan untuk aplikasi yang membutuhkan proses prediksi cepat dan model yang ringkas, seperti yang sering diimplementasikan pada perangkat \textit{edge} \cite{10348569}.
 
-Oleh karena itu, untuk mengurangi dampak pestisida terhadap kesehatan petani, inovasi pengembangan robot otonom  menggukan YOLO8n-seg untuk mendeteksi jalur berupa jarak antar tanaman cabai. Untuk menunjang penelitian ini robot  membutuhkan perangkat edge berupa NVIDIA Jetson Nano, Webcam untuk mendeteksi jalur. Untuk dapat bernavigasi secara otonom, robot juga menggunakan ESP32 dan Fuzzy Logic Controller untuk mengendalikan putaran roda pada robot untuk bernavigasi sesuai jalur. 
+Oleh karena itu, untuk mengurangi dampak pestisida terhadap kesehatan petani, inovasi pengembangan robot \textit{otonom}  menggukan \textit{YOLO8n-seg} untuk mendeteksi jalur berupa jarak antar tanaman cabai atau bedengan. Untuk menunjang penelitian ini robot  membutuhkan perangkat \textit{edge} berupa \textit{NVIDIA Jetson Nano, Webcam} untuk mendeteksi jalur. Untuk dapat bernavigasi secara \textit{otonom}, robot juga menggunakan \textit{ESP32} dan \textit{Fuzzy Logic Controller} untuk mengendalikan putaran roda pada robot untuk bernavigasi sesuai jalur. 
 
 \section{Identifikasi Masalah}
 Berdasarkan latar belakang permasalahan, dapat diidentifikasi masalah
 sebagai berikut :
 \begin{packed_enum}
 	\item Mengurangi bahaya dari paparan zat kimia pestisida.
-	\item Keterbatasan jarak pengoprasian navigasi robot dengan menggunakan remote control.
-	\item Perancangan navigasi otonom menggunkan sensor ultrasonic seperti HC-SR04 tidak efektif jika digunakan di luar ruangan, karena mempunyai keterbatasan jarak, interferensi akustik yang dapat menyebabkan kesalahan pengukuran.
-	\item Penggunaan GPS untuk navigasi memliki kekurangan akurasi posisi antara 5 hingga 10 meter. Selain itu penggunaan GPS tidak maksimal pada dinamika pergerakan, karena robot beroperasi di kebun cabai dengan keterbatasan ruang gerak.
+	\item Keterbatasan jarak pengoprasian navigasi robot dengan menggunakan \textit{remote control}.
+	\item Perancangan navigasi \textit{otonom} menggunkan sensor \textit{ultrasonic} seperti \textit{HC-SR04} tidak efektif jika digunakan di luar ruangan, karena mempunyai keterbatasan jarak, interferensi akustik yang dapat menyebabkan kesalahan pengukuran.
+	\item Penggunaan \textit{GPS} untuk navigasi memliki kekurangan akurasi posisi antara 5 hingga 10 meter. Selain itu penggunaan \textit{GPS} tidak maksimal pada dinamika pergerakan, karena robot beroperasi di kebun cabai dengan keterbatasan ruang gerak.
 \end{packed_enum}
 
 \section{Batasan Masalah}
 Batasan masalah pada penelitian ini ditentukan agar fokus pada permasalahan
 yang dirumuskan dan tidak meluas, berikut adalah batasan-batasan masalah:
 \begin{packed_enum}
-	\item Sistem Robot Penyemprot Pestisida menggunakan NVIDIA Jetson Nano dan ESp32 sebagai perangkat utama pengolahan data. Robot di uji pada lahan pertanian cabai.
+	\item Sistem Robot Penyemprot Pestisida menggunakan  \textit{NVIDIA Jetson Nano} dan \textit{ESp32} sebagai perangkat utama pengolahan data. Robot di uji pada lahan pertanian cabai.
 	\item Pengujian robot dilakukakan di kebun cabai di tanah kering tanpa ada genangan air.
-	\item Kebun cabai tempat pengujian menggunakan mulsa plastik untuk memudahkan proses object detection dan segmentation.
-	\item Robot Penyemprot Pestisida tetap menggunakan remote control
-	sebagai switch untuk memilih mode navigasi secara manual atau otonom.
-	\item Menggunakan algoritma YOLOv8 untuk melakukan object detection dan instance segmentation jalur pada jarak antar tanaman cabai.
-	\item Navigasi robot secara otonom menggunakan Fuzzy Logic Controller untuk mengendalikan putaran da arah roda.
+	\item Kebun cabai tempat pengujian menggunakan mulsa plastik untuk memudahkan proses \textit{object detection} dan \textit{segmentation}.
+	\item Robot Penyemprot Pestisida tetap menggunakan \textit{remote control}
+	sebagai \textit{switch} untuk memilih mode navigasi secara manual atau \textit{otonom}.
+	\item Menggunakan algoritma \textit{YOLOv8} untuk melakukan \textit{object detection} dan \textit{segmentation} jalur pada bedengan atau jarak antar tanaman cabai.
+	\item Navigasi robot secara \textit{otonom} menggunakan \textit{uzzy Logic Controller} untuk mengendalikan putaran da arah roda.
 \end{packed_enum}
 
 \section{Rumusan Masalah}
 Berdasarkan latar belakang yang telah diuraikan diatas, maka rumusan
 masalah dari penelitian ini adalah sebagai beriku:
 \begin{packed_enum}
-	\item Bagaimana merancang dan mengimplementasikan sistem navigasi otonom pada robot semprot pestisida yang mampu mendeteksi jalur di antara baris tanaman cabai menggunakan algoritma YOLOv8 instance segmentation?
-	\item Bagaimana memanfaatkan kemampuan komputasi dari Nvidia Jetson Nano untuk memproses data visual secara real-time dan mendukung kinerja algoritma YOLOv8 dalam kondisi lingkungan kebun yang dinamis dan beragam?
-	\item Bagaimana akurasi  algoritma YOLOv8 instance segmentation pada Nvidia Jetson Nano?
-	\item Bagaimana akurasi robot dalam bernavigasi secara otonom menggunakan algoritma YOLOv8 dan  fuzzy logic controller? 
+	\item Bagaimana merancang dan mengimplementasikan sistem navigasi \textit{otonom} pada robot semprot pestisida yang mampu mendeteksi jalur di antara baris tanaman cabai menggunakan algoritma \textit{YOLOv8}?
+	\item Bagaimana memanfaatkan kemampuan komputasi dari \textit{NVIDIA Jetson Nano} untuk memproses data visual secara \textit{real-time} dan mendukung kinerja algoritma \textit{YOLOv8} dalam kondisi lingkungan kebun yang dinamis dan beragam?
+	\item Bagaimana akurasi  algoritma \textit{YOLOv8 instance segmentation} pada \textit{NVIDIA Jetson Nano}?
+	\item Bagaimana akurasi robot dalam bernavigasi secara \textit{otonom} menggunakan algoritma YOLOv8 dan  fuzzy logic controller? 
 \end{packed_enum}
 
 \section{Tujuan}
 Berdasarkan permasalahan yang telah diuraikan diatas, penelitian ini
 memiliki beberapa tujuan yaitu :
 \begin{packed_enum}
-	\item Mengetahui akurasi model YOLOv8 untuk mendeteksi jaur pada  baris antar tanaman cabai.
-	\item Mengetahui performa  model YOLOv8 yang dijalankan didalam NVIDIA Jetson Nano pada robot penyemprot pestsida.
-	\item Mengembangkan sistem otonom pada robot penyemprot pestsida dengan mengimplementasikan algoritma YOLOv8 dan fuzzy logic controller.
+	\item Mengetahui akurasi model \textit{YOLOv8} untuk mendeteksi jaur pada  baris antar tanaman cabai.
+	\item Mengetahui performa  model \textit{YOLOv8} yang dijalankan didalam \textit{NVIDIA Jetson Nano} pada robot penyemprot pestsida.
+	\item Mengembangkan sistem otonom pada robot penyemprot pestsida dengan mengimplementasikan algoritma \textit{YOLOv8} dan \textit{fuzzy logic controller}.
 \end{packed_enum}
 
 \section{Manfaat}
@@ -101,11 +101,14 @@ Skripsi atau proyek akhir memiliki manfaat yang sangat penting bagi mahasiswa da
 \section{Keaslian Gagasan}
 Tugas Akhir dengan judul “Rancang Bangun Sistem Navigasi Otonom Pada Robot Semprot Pestisida menggunakan YOLOv8 dan Fuzzy Logic Controller” merupakan pengembangan alat dan metode yang sudah ada sebelumya. Penelitian yang dijadikan acuan adalah sebagai berikut:
 \begin{packed_enum}
-	\item Penelitian dengan judul "Rancang Bangun Robot Penyemprot Pestisida Otonom Dengan Sistem Wall-Follower Pada Penyemprotan Tanaman Cabai". Penelitian melibatkan perancangan dan pembuatan robot penyemprot pestisida otonom yang mampu menavigasi melalui bedengan dan melakukan penyemprotan pestisida secara otomatis pada tanaman cabai. Robot menggunakan mikrokontroler Arduino Uno sebagai pengontrol dan sensor ultrasonik HY-SRF05 untuk mendeteksi sisi kanan, kiri, depan, dan tanaman. \cite{budiono2021rancang}. Penelitian ini menggunakan Arduino Uno sehingga tidak memungkinkan untuk melakukan computer vision, dan penggunaan sensor ultrasonik HY-SRF05 kurang akurat jika digunakan di luar ruangan.
+	\item Penelitian dengan judul "Rancang Bangun Robot Penyemprot Pestisida Otonom Dengan Sistem Wall-Follower Pada Penyemprotan Tanaman Cabai". Penelitian melibatkan perancangan dan pembuatan robot penyemprot pestisida otonom yang mampu menavigasi melalui bedengan dan melakukan penyemprotan pestisida secara otomatis pada tanaman cabai. Robot menggunakan textit{mikrokontroler Arduino Uno} sebagai pengontrol dan sensor ultrasonik HY-SRF05 untuk mendeteksi sisi kanan, kiri, depan, dan tanaman. \cite{budiono2021rancang}. Penelitian ini menggunakan Arduino Uno sehingga tidak memungkinkan untuk melakukan computer vision, dan penggunaan sensor ultrasonik HY-SRF05 kurang akurat jika digunakan di luar ruangan.
 	
-	\item Sebuah penelitian yang berjudul “Improved YOLOv8-Seg Network for Instance Segmentation of Healthy and Diseased Tomato Plants in the Growth Stage”. Penelitian tersebut mengembangkan Algoritma YOLOv8s-Seg untuk melakukan instance segmentation pada tanaman tomat yang sehat dan terinfeksi penyakit pada berbagai tahap pertumbuhan. Algoritma diimplementasikan menggunakan PyTorch dan diuji pada sistem Windows 10 CPU Intel(R) Platinum 8255C dan GPU Nvidia GeForce RTX 2080Ti dengan hasil Presisi 91.9\%, Recall: 85.8\%, F1 score: 88.7\%, Segment mAP@0.5: 0.922 \cite{agriculture13081643}. Penggunaan \textit{NVIDIA Jetson Nano} akan lebih efisien karena ukuran yang kecil yang dirancang khusus untuk aplikasi \textit{artificial intelligence}  dan \textit{machine learning}  di \textit{ edge devices}.
+	\item Penelitian dengan judul  "Rancang Bangun Harvest Assisting Mobile Field Robot Berbasis Computer Vision dengan Metode Deep Learning" menggunakan Raspberry Pi 4B sebagai primary control device untuk mengolah data dari kamera. Data diolah dengan metode deep learning menggunakan YOLO8n \cite{mainda2023rancang}. Berdasarkan penelitian ini menggunakan  Raspberry Pi 4B, robot bernavigasi dengan mendeteksi dan mengikuti petani yang menggunakan rompi keselamatan tidak dengan bedengan pada lahan pertanian.
+	
+	\item Jurnal yang ditulis oleh Alexander Kirillov dan rekan-rekannya dari Meta AI Research dengan judul "Segment Anything". Dalam jurnal tersebut membahas tentang foundation model for image segmentation. SAM adalah model dasar untuk segmentasi citra yang dapat digunakan dengan dataset yang beragam dan luas \cite{Kirillov_2023_ICCV}.
+	
+	\item Sebuah penelitian yang berjudul “Improved YOLOv8-Seg Network for Instance Segmentation of Healthy and Diseased Tomato Plants in the Growth Stage”. Penelitian tersebut mengembangkan dan membandingkan hasil antara YOLOv8s-Seg dengan YOLOv8n-Seg untuk melakukan instance segmentation pada tanaman tomat yang sehat dan terinfeksi penyakit pada berbagai tahap pertumbuhan. Algoritma diimplementasikan menggunakan PyTorch dan diuji pada sistem Windows 10 CPU Intel(R) Platinum 8255C dan GPU Nvidia GeForce RTX 2080Ti. YOLOv8n-Seg menunjukan hasil waktu inferensi 3.1 ms lebih cepat dibandingkan dengan  YOLOv8s-Seg dengan  waktu inferensi 3.5 ms.\cite{agriculture13081643}. Penggunaan YOLOv8n-Seg akan lebih efisien jika diimplementasikan pada perangkat \textit{edge} NVIDIA Jetson Nano karena memiliki ukuran model yang lebih kecil dibanding YOLOv8s-Seg.
+	
+	\item Jurnal dengan judul "The Mobile Robot Control in Obstacle Avoidance Using Fuzzy Logic Controller" dan ditulis oleh M. Khairudin dan rekan-rekannya dari Universitas Negeri Yogyakarta dan Universiti Pendidikan Sultan Idris. Dalam jurnal tersbut menyimpulkan FLC dapat digunakan untuk mengontrol robot mobil dengan baik dalam menghindari obstacle, hasil simulasi dan eksperimental menunjukkan bahwa \textit{Fuzzy Logic Controller} bekerja lebih baik daripada \textit{PID} \cite{khairudin2020mobile}.
 	 
-	\item 
-	
 \end{packed_enum}
-Berdasarkan literatur dari kajian pustaka secara mendalam
