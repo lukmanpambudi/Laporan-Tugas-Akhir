@@ -30,25 +30,18 @@ Artificial Intelligence atau Kecerdasan adalah merupakan bidang ilmu komputer ya
 	LSTM merupakan varian khusus dari RNN yang dirancang untuk mengatasi masalah utama yang dihadapi RNN dalam menangani informasi jangka panjang. LSTM memperkenalkan struktur yang lebih kompleks daripada unit sederhana dalam RNN. Unit LSTM memiliki tiga "pintu" atau gerbang yang memungkinkan mereka untuk mengontrol aliran informasi yaitu, Forget Gate, Input Gate, dan Output Gate. Dengan adanya gerbang-gerbang tersebut  LSTM dapat mengatasi masalah vanishing gradient dan exploding gradient.  Hal ini membuat LSTM sangat efektif dalam memodelkan dan memprediksi urutan data yang kompleks, seperti teks, suara, atau data deret waktu yang panjang.
 \end{packed_item}
 
-
-\subsection{\textit{YOLOv8}}
+\subsection{YOLOv8}
+YOLOv8 (You only Look Once) versi 8 dikembangkan oleh Ultralytics, merupakan model deteksi objek yang mempunyai dukungan out-of-the-box untuk tugas-tugas seperti deteksi objek, klasifikasi, dan segmentasi. YOLOv8 memiliki keunggulan kecepatan dan akurasi untuk memproses gambar secara real-time \cite{roboflowWhatYOLOv8}. Arsitektur YOLOv8 mempunyai peningkatan dengan fokus pada akurasi dan kecepatan yang lebih baik dibandinkan dengan versi sebelumnya. berikut ini adalah 3 komponen penting dari YOLOv8:
 \begin{packed_item}
-	\item arsitektur 
-	\item dfsdf
-\end{packed_item}
+	\item \textbf{Backbone:}
+	Backbone adalah  jaringan saraf konvolusi (CNN) yang bertugas untuk mengekstraksi fitur dari gambar masukan. YOLOv8 menggunakan custom CSPDarknet53 sebagai backbone,  CSPDarknet53 merupakan varian dari  arsitektur Darknet53 yang telah dioptimalkan yang dapat meningkatkan aliran informasi antar lapisan dan meningkatkan akurasi.
+	\item \textbf{Neck:} 
+	\textit{Neck} dikenal sebagai \textit{feature extractor} berfungsi untuk peta fitur dari berbagai tahap di \textit{backbone} untuk menangkap informasi pada berbagai skala. \textit{YOLOv8} menggunakan \textit{C2f} sebagai pengganti \textit{Feature Pyramid Network (FPN)} yang dapat lebih baik dalam mengenali objek dengan berbagai ukuran.  
+	\item \textbf{Head:}
+	\textit{Head} mempunyai tugas utama untuk membuat prediksi. \textit{YOLOv8} menggunakan beberapa modul deteksi yang memprediksi \textit{Bounding Box, Objectness Scores, dan Class Probabilities}
+\end{packed_item}	
 
-\subsection{\textit{Computer Vision}}
-\subsection{\textit{Image Processing}}
-	
-
-\section{Computer Vision}
-Computer vision merupakan cabang ilmu komputer yang meniru kemampuan visual manusia. Computer vision dalam AI berkontribusi dalam pengembangan sistem otomasi yang dapat dapat menafsirkan data visual seperti foto atau vidio dengan cara yang sama dengan manusia. Dalam computer vision memerlukan informasi dalam jumlah besar untuk mengidentifikasi objek visual. Computer vision akan menafsirkan dan memahami gambar berdasarkan piksel demi piksel. Analisis data yang berulang diperlukan hingga sistem dapat membedakan dan mengenali visual. Salah satu bidangnya adalah object detection, bertujuan mengenali dan menentukan letak objek dalam gambar untuk berbagai keperluan seperti keamanan, monitoring, dan produktivitas.  Terdapat keterkaitan dengan bidang image processing dan machine vision, yang menunjukkan kesamaan dalam teknik dan aplikasi dasarnya. Computer vision memiliki keterhubungan luas dengan berbagai bidang lain seperti artificial intelligence, robotika, otomasi industri, pengolahan sinyal, optik fisik, dan neurobiologi \cite{anggraeni2004sistem}.
-
-\section{YOLOv8}
-YOLOv8 (You only Look Once) versi 8 dirilis oleh Ultralytics yang mempunyai kemampuan lebih unggul dalam hal kecepatan  akurasi dibandingkan pendahulunya. YOLOv8 mengadopsi konsep desain YOLOv7 ELAN, dengan modul dasar konvolusi C2f yang mengintegrasikan dua cabang aliran gradien paralel untuk aliran informasi gradien yang lebih kuat. Selain itu, YOLOv8 menggunakan Spatial Pyramid Pooling Fusion (SPPF) untuk mengekstraksi informasi kontekstual dari gambar pada berbagai skala, yang secara signifikan meningkatkan kemampuan generalisasi model. Dalam desain leher YOLOv8, struktur konvolusi dihilangkan selama fase up-sampling dan modul C3 digantikan oleh modul C2f. YOLOv8 juga menyediakan kerangka kerja untuk pelatihan model, memungkinkan pelaksanaan tugas-tugas penting seperti deteksi objek, segmentasi instance, klasifikasi gambar, dan estimasi pose \cite{bai2023automated}.
-
-
-Beriku ini terdapat  arsitektur dari YOLOv8 yang tersaji pada \cref{fig:yolov8}.
+Berikut ini terdapat  arsitektur dari YOLOv8 yang tersaji pada \cref{fig:yolov8}.
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.4]{yolov8-architecture}
@@ -56,9 +49,30 @@ Beriku ini terdapat  arsitektur dari YOLOv8 yang tersaji pada \cref{fig:yolov8}.
 	\label{fig:yolov8}
 \end{figure}
 
-\section{Fuzzy Logic}
-Logika fuzzy (fuzzy logic) adalah salah satu cabang dari kecerdasan buatan (artificial intelligence). Logika fuzzy merupakan pengembangan dari teori himpunan, di mana setiap anggotanya memiliki tingkat keanggotaan dengan nilai kontinu antara 0 hingga 1. Sejak pertama kali diperkenalkan oleh Lotfi A. Zadeh pada tahun 1965. Fuzzy Logic merupakan suatu metode analisis sistem yang tidak pasti. Fuzzy Logic igunakan untuk mengambil keputusan berdasarkan data yang tidak pasti dan tidak biner. Fuzzy logic memungkinkan penggunaan himpunan fuzzy yang dapat mewakili nilai yang tidak pasti dan tidak biner dalam sistem. Logika fuzzy telah diaplikasikan dalam berbagai bidang, seperti pengendalian proses, klasifikasi dan pencocokan pola, manajemen, pengambilan keputusan, dan lain-lain.
+YOLOv8 menggunakan pendekatan \textit{ "Anchor Free Detection"} yang menghilangkan kebutuhan akan anchor boxes yang telah diatur sebelumnya untuk membuat prediksi bounding box. Sebagai gantinya, model belajar untuk mendeteksi objek langsung dari fitur gambar, yang menyederhanakan arsitektur dan mengurangi kompleksitas komputasi. Pendekatan tersebut mempunyai keuntungan lebih efisien karena Mengurangi jumlah prediksi yang harus diproses, sehingga mempercepat inferensi dan mengurangi penggunaan memori. Selain itu mempunyai akurasi yang lebih tinggi karena dapat Menghindari kesalahan prediksi yang disebabkan oleh anchor boxes yang tidak cocok dengan ukuran dan bentuk objek sebenarnya. Berikut ini gambar \cref{fig:anchor} adalah visualisasi dari sebuah anchor box dalam arsitektur YOLO.
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.6]{AnchorYolo}
+	\caption{Visualisasi anchor box YOLO}
+	\label{fig:anchor}
+\end{figure}
+
+\section{Fuzzy Logic}
+Fuzzy Logic diperkenalkan pada tahun 1965 oleh Professor Lotfi A. Zadeh melalui karyanya yang berjudul "Fuzzy Sets". Fuzzy Logic adalah sebuah metode dalam ilmu komputer dan matematika yang menangani konsep kebenaran yang tidak bersifat biner atau absolut.  \cite{kambalimath2020basic}.Metode ini memungkinkan pemetaan ruang input ke dalam ruang output dengan nilai yang kontinu dan fleksibel. Dalam logika fuzzy, nilai-nilai dinyatakan dalam derajat keanggotaan dan derajat kebenaran, yang memungkinkan suatu hal dapat dinyatakan sebagian benar dan sebagian salah secara bersamaan. Hal ini menjadikan Fuzzy Logic sangat efektif untuk menangani ketidakpastian dan ambiguitas dalam berbagai aplikasi, seperti sistem kontrol, pengambilan keputusan, dan kecerdasan buatan.\cite{sri2003artificial}. Berikut ini adalah beberapa konsep kunci pada fuzzy logic:
+\subsection{\textit{Himpunan Crisp Dan Himpunan Fuzzy}}
+Himpunan Crisp(himpunan tegas) adalah himpunan dimana setiap elemen hanya memiliki 2 kemungkinan yaitu termasuk keanggotaan himpunan atau tidak mejadi keanggotaan himpunan. Funsgi keanggotaan mendefinisikan apakah suatu elemen x alalah anggota himpunan. Jika elemen tersebut adalah anggota himpunan maka x=1, jika bukan bagian dari keanggotaan maka x=0 \cite{rindengan2019sistem}. Sedangkan Himmpunan Fuzzy nilai x berada di antara nilai 0 dan 1, nilai 0 menunjukkan elemen tersebut bukan anggota himpunan dan 1 menunjukkan elemen tersebut merupakan anggota himpunan. 
+\subsection{\textit{Fungsi Keanggotaan}}
+Fungsi keanggotaan(membership function) adalah komponen penting yang memungkinkan representasi derajat keanggotaan elemen dalam himpunan fuzzy. Fungsi keanggotaan dapat dapat menangani  ketidakpastian dan ambiguitas dalam berbagai aplikasi, termasuk sistem kontrol, pengambilan keputusan, dan pengenalan pola. Fungsi keanggotaan memiliki 3 jenis yaitu, fungsi segitiga, trapesium, dan Gaussian.
+\subsection{\textit{Sistem Interferensi Fuzzy}}
+Sistem Interferensi Fuzzy (Fuzzy Inference System)  adalah framework untuk melakukan  penalaran atau inferensi berdasarkan logika fuzzy. Sistem ini berfungsi untuk mengambil keputusan menggunakan aturan-aturan fuzzy dan input yang telah difuzzifikasi.  Fuzzy Inference System memiliki komponen utama yaitu, Fuzzifikasi, Basis Aturan Fuzzy, dan 	Defuzzifikasi, Inference Engine, Agregasi Output Fuzzy, dan Defuzzifikasi.
+\subsection{\textit{Metodologi Desain Sistem Fuzzy}}
+Merupakan  pendekatan sistematis untuk merancang dan mengimplementasikan sistem berbasis logika fuzzy. 
+\subsection{\textit{Metode Mamdani}}
+Pendekatan metode mamdani populer digunakan dalam sistem inferensi fuzzy untuk mengimplementasikan logika fuzzy karenan kemampuanya menangani ketidakpastian dan ambiguitas dengan cara yang intuitif dan mudah dipahami. 
+
+\section{Google Colab}
+\section{Roboflow}
 \section{NVIDIA Jetson Nano}
 NVIDIA Jetson Nano adalah produk dari NVIDIA yang dirancang khusus untuk keperluan pengembangan dan implementasi solusi Internet of Things (IoT) dengan kemampuan komputasi terdiri dari CPU dengan kecepatan 1,43 GHz dan GPU dengan 128 inti dari generasi Maxwell. NVIDIA Jetson Nano dapat digunakan untuk machine learning, computer vision. Selain itu dapat digunakan dengan berbagai framework pengembangan AI, seperti Pandas, Numpy, Tensorflow, Keras, PyTorch, dan MXNet. Berikut ini adalah gambar \cref{fig:jetson} NVIDIA Jetson Nano.
 
