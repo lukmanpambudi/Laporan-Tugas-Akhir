@@ -14,24 +14,14 @@ Bedengan adalah gundukan tanah yang dibuat untuk menanam tanaman dengan lebar da
 	\label{fig:bedengan}
 \end{figure}
 
-\section{\textit{Artificial Intelligence}}
-Artificial Intelligence atau Kecerdasan adalah merupakan bidang ilmu komputer yang digunakan untuk  masalah kognitif yang umumnya terkait dengan kecerdasan manusia, seperti pembelajaran, penciptaan, dan pengenalan gambar \cite{amazonKecerdasanBuatan}. Artificial Intelligence  melibatkan pelatihan komputer untuk mempelajari perilaku manusia seperti pembelajaran, penilaian, dan pengambilan keputusan. Artificial Intelligence adalah proyek pengetahuan yang mengambil pengetahuan sebagai objek, memperoleh pengetahuan, menganalisis dan mempelajari metode ekspresi pengetahuan, serta menggunakan pendekatan ini untuk mencapai efek mensimulasikan aktivitas intelektual manusia \cite{zhang2021study}. Tujuan utama AI adalah untuk menciptakan sistem yang dapat berfungsi secara mandiri, belajar dari lingkungan mereka, dan menyesuaikan diri untuk mencapai tujuan yang telah ditentukan dengan efisiensi dan akurasi yang tinggi.
-
-\subsection{\textit{Deep Learning}}
-\textit{Deep Learning} adalah salah adalah salah satu sub-bidang dari pembelajaran mesin (machine learning) yang berfokus pada penggunaan jaringan saraf tiruan \textit{(artificial neural networks)} dengan banyak lapisan \textit{(deep neural networks)} untuk menganalisis dan memproses data. Teknik ini memungkinkan komputer untuk belajar dan membuat keputusan yang kompleks tanpa pemrograman eksplisit untuk setiap tugas\cite{amazonDeepLearning}. Deep Learning beroperasi dengan memanfaatkan jaringan saraf yang terdiri dari lapisan-lapisan node yang saling terhubung, menerapkan forward propagation untuk memproses data dan backpropagation untuk memperbaiki kesalahan. Proses ini memerlukan daya komputasi yang signifikan, pada umumnya menggunakan GPU berkinerja tinggi \cite{ibmWhatDeep}. Berikut ini adalah beberapa contoh tipe model deep learning:
-\begin{packed_item}
-	\item Artificial Neural Networks(ANN)
-	 \textit{ANN} adalah model komputasi yang terinspirasi dari cara kerja otak manusia. ANN digunakan untuk memecahkan berbagai masalah, terutama yang berkaitan dengan pengenalan pola dan pengolahan data. 
-	\item Convolutional Neural Networks(CNN)
-	CNN dirancang untuk pemrosesan data grid, seperti gambar. Menggunakan convolutional layer yang mampu menangkap fitur spasial dari data. CNN pada umumnya digunakan pada \textit{computer vision}, pengenalan gambar, deteksi objek, analisis video. 
-	\item Recurrent Neural Networks (RNN)
-	RNN dirancang untuk bekerja dengan data berurutan, seperti teks atau waktu. RNN mempunyai kemampuan untuk "mengingat" informasi sebelumnya  dalam urutan data tersebut melalui penggunaan keadaan internal (state).Sehingga RNN biasa diaplikasikan untuk tugas seperti pengenalan suara, dan penerjemahan bahasa. 
-	\item Long Short-Term Memory (LSTM)
-	LSTM merupakan varian khusus dari RNN yang dirancang untuk mengatasi masalah utama yang dihadapi RNN dalam menangani informasi jangka panjang. LSTM memperkenalkan struktur yang lebih kompleks daripada unit sederhana dalam RNN. Unit LSTM memiliki tiga "pintu" atau gerbang yang memungkinkan mereka untuk mengontrol aliran informasi yaitu, Forget Gate, Input Gate, dan Output Gate. Dengan adanya gerbang-gerbang tersebut  LSTM dapat mengatasi masalah vanishing gradient dan exploding gradient.  Hal ini membuat LSTM sangat efektif dalam memodelkan dan memprediksi urutan data yang kompleks, seperti teks, suara, atau data deret waktu yang panjang.
-\end{packed_item}
-
-\subsection{YOLOv8}
-YOLOv8 (You only Look Once) versi 8 dikembangkan oleh Ultralytics, merupakan model deteksi objek yang mempunyai dukungan out-of-the-box untuk tugas-tugas seperti deteksi objek, klasifikasi, dan segmentasi. YOLOv8 memiliki keunggulan kecepatan dan akurasi untuk memproses gambar secara real-time \cite{roboflowWhatYOLOv8}. Arsitektur YOLOv8 mempunyai peningkatan dengan fokus pada akurasi dan kecepatan yang lebih baik dibandinkan dengan versi sebelumnya. berikut ini adalah 3 komponen penting dari YOLOv8:
+\section{YOLOv8}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.4]{hirarkiAi}
+	\caption{Hubungan antara tiga konsep utama dalam bidang kecerdasan buatan}
+	\label{fig:hirarki}
+\end{figure}
+Yolov8 (You only Look Once)  versi 8 merupakan salah satu teknologi atau metode pendekatan dilingkup deep learning yang merupakan sub-bidang bagian dari keseluruhan ekosistem Artificial Intelligence seperti pada \cref{fig:hirarki}. \textit{Yolov8} menggunakan Convolutional Neural Networks(CNN) untuk memproses gambar dan mendeteksi objek di dalamnya. YOLOv8 dikembangkan oleh Ultralytics, merupakan model deteksi objek yang mempunyai dukungan out-of-the-box untuk tugas-tugas seperti deteksi objek, klasifikasi, dan segmentasi. YOLOv8 memiliki keunggulan kecepatan dan akurasi untuk memproses gambar secara real-time \cite{roboflowWhatYOLOv8}. Arsitektur YOLOv8 mempunyai peningkatan dengan fokus pada akurasi dan kecepatan yang lebih baik dibandinkan dengan versi sebelumnya. berikut ini adalah 3 komponen penting dari YOLOv8:
 \begin{packed_item}
 	\item \textbf{Backbone:}
 	Backbone adalah  jaringan saraf konvolusi (CNN) yang bertugas untuk mengekstraksi fitur dari gambar masukan. YOLOv8 menggunakan custom CSPDarknet53 sebagai backbone,  CSPDarknet53 merupakan varian dari  arsitektur Darknet53 yang telah dioptimalkan yang dapat meningkatkan aliran informasi antar lapisan dan meningkatkan akurasi.
@@ -49,7 +39,7 @@ Berikut ini terdapat  arsitektur dari YOLOv8 yang tersaji pada \cref{fig:yolov8}
 	\label{fig:yolov8}
 \end{figure}
 
-YOLOv8 menggunakan pendekatan \textit{ "Anchor Free Detection"} yang menghilangkan kebutuhan akan anchor boxes yang telah diatur sebelumnya untuk membuat prediksi bounding box. Sebagai gantinya, model belajar untuk mendeteksi objek langsung dari fitur gambar, yang menyederhanakan arsitektur dan mengurangi kompleksitas komputasi. Pendekatan tersebut mempunyai keuntungan lebih efisien karena Mengurangi jumlah prediksi yang harus diproses, sehingga mempercepat inferensi dan mengurangi penggunaan memori. Selain itu mempunyai akurasi yang lebih tinggi karena dapat Menghindari kesalahan prediksi yang disebabkan oleh anchor boxes yang tidak cocok dengan ukuran dan bentuk objek sebenarnya. Berikut ini gambar \cref{fig:anchor} adalah visualisasi dari sebuah anchor box dalam arsitektur YOLO.
+YOLOv8 menggunakan pendekatan \textit{ "Anchor Free Detection"} yang menghilangkan kebutuhan akan anchor boxes yang telah diatur sebelumnya untuk membuat prediksi bounding box. Sebagai gantinya, model belajar untuk mendeteksi objek langsung dari fitur gambar, yang menyederhanakan arsitektur dan mengurangi kompleksitas komputasi. Pendekatan tersebut mempunyai keuntungan lebih efisien karena Mengurangi jumlah prediksi yang harus diproses, sehingga mempercepat inferensi dan mengurangi penggunaan memori. Selain itu mempunyai akurasi yang lebih tinggi karena dapat Menghindari kesalahan prediksi yang disebabkan oleh anchor boxes yang tidak cocok dengan ukuran dan bentuk objek sebenarnya. Berikut ini \cref{fig:anchor} adalah visualisasi dari sebuah anchor box dalam arsitektur YOLO.
 
 \begin{figure}[H]
 	\centering
@@ -61,7 +51,7 @@ YOLOv8 menggunakan pendekatan \textit{ "Anchor Free Detection"} yang menghilangk
 \section{Fuzzy Logic}
 Fuzzy Logic diperkenalkan pada tahun 1965 oleh Professor Lotfi A. Zadeh melalui karyanya yang berjudul "Fuzzy Sets". Fuzzy Logic adalah sebuah metode dalam ilmu komputer dan matematika yang menangani konsep kebenaran yang tidak bersifat biner atau absolut.  \cite{kambalimath2020basic}.Metode ini memungkinkan pemetaan ruang input ke dalam ruang output dengan nilai yang kontinu dan fleksibel. Dalam logika fuzzy, nilai-nilai dinyatakan dalam derajat keanggotaan dan derajat kebenaran, yang memungkinkan suatu hal dapat dinyatakan sebagian benar dan sebagian salah secara bersamaan. Hal ini menjadikan Fuzzy Logic sangat efektif untuk menangani ketidakpastian dan ambiguitas dalam berbagai aplikasi, seperti sistem kontrol, pengambilan keputusan, dan kecerdasan buatan.\cite{sri2003artificial}. Berikut ini adalah beberapa konsep kunci pada fuzzy logic:
 \subsection{\textit{Himpunan Crisp Dan Himpunan Fuzzy}}
-Himpunan Crisp(himpunan tegas) adalah himpunan dimana setiap elemen hanya memiliki 2 kemungkinan yaitu termasuk keanggotaan himpunan atau tidak mejadi keanggotaan himpunan. Funsgi keanggotaan mendefinisikan apakah suatu elemen x alalah anggota himpunan. Jika elemen tersebut adalah anggota himpunan maka x=1, jika bukan bagian dari keanggotaan maka x=0 \cite{rindengan2019sistem}. Sedangkan Himmpunan Fuzzy nilai x berada di antara nilai 0 dan 1, nilai 0 menunjukkan elemen tersebut bukan anggota himpunan dan 1 menunjukkan elemen tersebut merupakan anggota himpunan. 
+Himpunan Crisp(himpunan tegas) adalah himpunan dimana setiap elemen hanya memiliki 2 kemungkinan yaitu termasuk keanggotaan himpunan atau tidak mejadi keanggotaan himpunan. Funsgi keanggotaan mendefinisikan apakah suatu elemen x alalah anggota himpunan. Jika elemen tersebut adalah anggota himpunan maka x=1, jika bukan bagian dari keanggotaan maka x=0. Sedangkan Himmpunan Fuzzy nilai x berada di antara nilai 0 dan 1, nilai 0 menunjukkan elemen tersebut bukan anggota himpunan dan 1 menunjukkan elemen tersebut merupakan anggota himpunan\cite{rindengan2019sistem}. 
 \subsection{\textit{Fungsi Keanggotaan}}
 Fungsi keanggotaan(membership function) adalah komponen penting yang memungkinkan representasi derajat keanggotaan elemen dalam himpunan fuzzy. Fungsi keanggotaan dapat dapat menangani  ketidakpastian dan ambiguitas dalam berbagai aplikasi, termasuk sistem kontrol, pengambilan keputusan, dan pengenalan pola. Fungsi keanggotaan memiliki 3 jenis yaitu, fungsi segitiga, trapesium, dan Gaussian.
 \subsection{\textit{Sistem Interferensi Fuzzy}}
@@ -72,7 +62,37 @@ Merupakan  pendekatan sistematis untuk merancang dan mengimplementasikan sistem 
 Pendekatan metode mamdani populer digunakan dalam sistem inferensi fuzzy untuk mengimplementasikan logika fuzzy karenan kemampuanya menangani ketidakpastian dan ambiguitas dengan cara yang intuitif dan mudah dipahami. 
 
 \section{Google Colab}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.6]{GoogleColab}
+	\caption{Google Colaboratory}
+	\label{fig:Google-Colaboratory}
+\end{figure}
+
+Pada \cref{fig:Google-Colaboratory} merupakan logo \textit{Google Colab} atau \textit{Google Colaboratory}, merupakan platform yang sangat populer berbasis cloud untuk membuat dan menjalankan kode Python secara interaktif di dalam notebook. Memiliki fitur kemudahan mengakses pemrosesan grafis (GPU) dan tensor processing unit (TPU) yang sangat berguna untuk melatih model machine learning berskala besar dan kompleks. Google Colab juga mendukung berbagai library python, antara lain  NumPy, Pandas, TensorFlow, PyTorch, dan banyak lainnya. Sehingga memudahkan untuk melakukan analisis data, machine learning, dan deep learning langsung dalam notebook. 
+
 \section{Roboflow}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.1]{logo-roboflow}
+	\caption{Roboflow}
+	\label{fig:roboflow}
+	
+\end{figure}
+Roboflow adalah platform yang memfasilitasi proses pengembangan, pelatihan model computer vision. Roboflow dirancang membuat tugas-tugas yang berhubungan dengan pengenalan gambar menjadi lebih mudah dan efisien. Berikut ini adalah fitur-fitur utama Roboflow:
+\begin{packed_item}
+	\item \textit{Annotasi Data}: Roboflow menyediakan alat untuk anotasi data gambar. Roboflow dapat menandai objek dalam gambar dengan berbagai jenis anotasi seperti bounding box, polygon, dan segmentation mask. Hal ini bertujuan untuk membangun  \textit{dataset} yang berkualitas untuk model \textit{computer vision}.
+	
+	\item Pengelolaan \textit{Dataset}
+	Roboflow memungkinkan untuk mengunggah, mengelola, dan mengorganisir dataset gambar dan mengelompokkan, menggabungkan, dan memodifikasi dataset sesuai kebutuhan.
+	
+	\item \textit{Augmentasi Data}
+	Roboflow memberikan berbagai teknik augmentasi data yang dapat digunakan untuk meningkatkan ukuran dan keragaman dataset tanpa memerlukan gambar tambahan. 
+
+	\item \textit{Preprocessing} dan \textit{Ekspor}
+	FItur ini berfungai untuk melakukan preprocessing pada gambar untuk memastikan bahwa data dalam format yang optimal untuk pelatihan model. Roboflow mendukung ekspor dataset dalam berbagai format yang kompatibel dengan berbagai framework machine learning seperti TensorFlow, PyTorch, Darknet (YOLO), dan lainnya.
+\end{packed_item}
+
 \section{NVIDIA Jetson Nano}
 NVIDIA Jetson Nano adalah produk dari NVIDIA yang dirancang khusus untuk keperluan pengembangan dan implementasi solusi Internet of Things (IoT) dengan kemampuan komputasi terdiri dari CPU dengan kecepatan 1,43 GHz dan GPU dengan 128 inti dari generasi Maxwell. NVIDIA Jetson Nano dapat digunakan untuk machine learning, computer vision. Selain itu dapat digunakan dengan berbagai framework pengembangan AI, seperti Pandas, Numpy, Tensorflow, Keras, PyTorch, dan MXNet. Berikut ini adalah gambar \cref{fig:jetson} NVIDIA Jetson Nano.
 
@@ -107,13 +127,13 @@ NVIDIA Jetson Nano memiliki pin General Purpose Input/Output (GPIO) untuk menghu
 	\end{tabular}
 \end{table}
 
-\section{ESP32 DevKit V1}
-ESP32 DevKit V1 adalah salah satu dari berbagai pengembangan perangkat keras (hardware development) yang didasarkan pada mikrokontroler ESP32 yang sangat populer. ESP32 merupakan produk dari Espressif Systems, yang memiliki kemampuan Wi-Fi dan Bluetooth yang kuat serta berbagai fitur lainnya yang membuatnya sangat cocok untuk berbagai proyek IoT (Internet of Things). Berikut ini adalah gambar \cref{fig:ESP} yang menampilkan ESP32 DevKit V1.
+\section{Doit ESP32 DevKit V1}
+Doit ESP32 DevKit V1 adalah salah satu dari berbagai pengembangan perangkat keras (hardware development) yang didasarkan pada mikrokontroler ESP32 yang sangat populer. ESP32 merupakan produk dari Espressif Systems, yang memiliki kemampuan Wi-Fi dan Bluetooth yang kuat serta berbagai fitur lainnya yang membuatnya sangat cocok untuk berbagai proyek IoT (Internet of Things). Berikut ini adalah gambar \cref{fig:ESP} yang menampilkan ESP32 DevKit V1.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.2]{esp32}
-	\caption{Gambar ESP32 DevKit V1}
+	\includegraphics[scale=0.1]{doitesp32}
+	\caption{Doit ESP32 DevKit V1}
 	\label{fig:ESP}
 \end{figure}
 
@@ -146,8 +166,8 @@ Berikut ini adalah \cref{tab:spesifikasi} yang memuat spesifikasi ESP32 DevKit V
 	\end{tabular}
 \end{table}
 
-\section{Kamera}
-Webcam atau web camera merupakan perangkat keras yang terdiri dari kamera. Berfungsi untuk merekam vidio atau gambar secara real-time yang dapat diakses menggunakan world wide web (www), program instant messaging, atau aplikasi komunikasi dengan tampilan video pada PC untuk berbagai tujuan, diantaranya sistem keamanan, pengenalan wajah, vidio konfersi dll. Webcam pada umumnya terhubung ke komputer melalui USB atau koneksi nirkabel. Webcam telah menjadi yang sangat umum dan terintegrasi dalam laptop, tablet, dan bahkan beberapa ponsel pintar. Gambar \cref{fig:webcam} merupakan Webcam Fantech Luminous C30. 
+\section{\textit{Webcam}}
+Webcam Berfungsi untuk merekam vidio atau gambar secara real-time yang dapat diakses menggunakan world wide web (www), program instant messaging, atau aplikasi komunikasi dengan tampilan video pada PC untuk berbagai tujuan, diantaranya sistem keamanan, pengenalan wajah, vidio konfersi dll. Webcam pada umumnya terhubung ke komputer melalui USB atau koneksi nirkabel. Webcam telah menjadi yang sangat umum dan terintegrasi dalam laptop, tablet, dan bahkan beberapa ponsel pintar. Berikut ini adalah \cref{fig:webcam} Webcam Fantech Luminous C30. 
 
 \begin{figure}[H]
 	\centering
@@ -178,7 +198,7 @@ Berikut ini \cref{tab:spesifikasi-webcam} yang berisi spesifikasi dari  Webcam F
 \end{table}
 
 \section{Driver Motor IBT-2 BTS7960}
-Driver Motor IBT-2 BTS7960 adalah sebuah modul driver motor yang sering digunakan dalam aplikasi kendali motor DC (Direct Current) dengan arus besar. IBT-2 BTS7960 adalah jenis driver motor yang memiliki kemampuan untuk mengendalikan arah putaran dan kecepatan motor DC dengan menggunakan sinyal PWM (Pulse Width Modulation).
+Driver Motor IBT-2 BTS7960 adalah modul driver motor yang sering digunakan dalam aplikasi kendali motor DC (Direct Current) dengan arus besar. IBT-2 BTS7960 adalah jenis driver motor yang memiliki kemampuan untuk mengendalikan arah putaran dan kecepatan motor DC dengan menggunakan sinyal PWM (Pulse Width Modulation).
 Driver motor ini menggunakan chip BTS7960 sebagai bagian intinya. Chip ini mampu menangani arus hingga beberapa puluhan ampere dengan efisiensi yang tinggi. Modul IBT-2 BTS7960 memiliki fitur perlindungan termal dan arus berlebih, sehingga dapat memberikan keamanan tambahan pada sistem kendali motor. Beriku ini adalah \cref{fig:driver-motor-ibt} Driver Motor IBT-2 BTS796.
 
 \begin{figure}[H]
@@ -188,10 +208,8 @@ Driver motor ini menggunakan chip BTS7960 sebagai bagian intinya. Chip ini mampu
 	\label{fig:driver-motor-ibt}
 \end{figure}
 
-Kelebihan dari driver motor IBT-2 BTS7960 antara lain kemampuannya mengendalikan motor DC dengan arus tinggi, memiliki perlindungan terhadap kondisi berlebih seperti suhu dan arus, serta kemampuan untuk mengatur kecepatan motor dengan presisi menggunakan sinyal PWM. Driver motor seperti IBT-2 BTS7960 umumnya digunakan dalam berbagai aplikasi yang membutuhkan kendali motor DC yang handal dan efisien, seperti robotika, kendaraan listrik, dan sistem otomatisasi industri.
-
 \section{Motor DC MY1016Z-250W 24V}
-Motor DC MY1016Z-250W 24V adalah jenis motor DC (Direct Current). Motor ini sering digunakan dalam kendaraan listrik seperti sepeda listrik, skuter listrik, dan kendaraan kecil lainnya. Mereka juga dapat digunakan dalam aplikasi lain yang memerlukan motor listrik DC dengan daya output yang sesuai. Terdiri dari bagian-bagian seperti kumparan, komutator, dan rotor yang terpasang pada poros. Konstruksi ini memungkinkan motor untuk mengubah energi listrik menjadi gerakan mekanis. Kemampuan motor untuk memberikan torsi atau gaya putar. Torsi yang dihasilkan oleh motor bergantung pada berbagai faktor termasuk arus yang digunakan, tegangan, dan desain mekanis. Berikut ini adalah \cref{fig:motordc} dan spesifikasi yang termuat pada \cref{tab:spesifikasi-motor}
+Motor DC MY1016Z-250W 24V adalah jenis motor DC (Direct Current). Motor ini sering digunakan dalam kendaraan listrik seperti sepeda listrik, skuter listrik, dan kendaraan kecil lainnya. Terdiri dari bagian-bagian seperti kumparan, komutator, dan rotor yang terpasang pada poros. Konstruksi ini memungkinkan motor untuk mengubah energi listrik menjadi gerakan mekanis. Kemampuan motor untuk memberikan torsi atau gaya putar. Torsi yang dihasilkan oleh motor bergantung pada berbagai faktor termasuk arus yang digunakan, tegangan, dan desain mekanis. Berikut ini adalah \cref{fig:motordc} dan spesifikasi yang termuat pada \cref{tab:spesifikasi-motor}
 
 \begin{figure}[H]
 	\centering
