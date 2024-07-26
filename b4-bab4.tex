@@ -5,10 +5,10 @@
 
 \chapter[PROSES, HASIL, PEMBAHASAN]{\\ PROSES, HASIL, PEMBAHASAN}
 
-\section{Section 4.1}
+\section{Pembuatan Robot Sempot}
 Hasil adalah bagian dari laporan proyek akhir sarjana terapan yang menjabarkan tentang temuan yang didapat dari pelaksanaan penelitian. Hasil penelitian dapat ditunjukkan dalam bentuk tabel, grafik, atau deskripsi yang menunjukkan data yang didapat dari pengumpulan data. Hasil juga harus dianalisis dan dibahas dalam konteks masalah yang diteliti dan tujuan penelitian.
 
-Dalam laporan proyek akhir sarjana terapan yang meneliti pengaruh perubahan iklim terhadap hasil panen padi, hasil yang didapat dapat ditunjukkan dalam bentuk grafik yang menunjukkan perbandingan hasil panen padi di lokasi yang berbeda dengan kondisi iklim yang berbeda. Hasil ini juga dapat dianalisis dengan menggunakan statistik inferensial untuk mengetahui pengaruh perubahan iklim terhadap hasil panen padi.
+Dalam laporan proyek akhir sarjana terapan yang meneliti pengaruh perubahan iklim terhadap hasil panen padi, hasil yang didapat dapat ditunjukkan dalam bentuk grafik yang menunjukkan perbandingan hasil panen padi di lokasi yang berbeda dengan kondisi iklim yang berbeda Hasil ini juga dapat dianalisis dengan menggunakan statistik inferensial untuk mengetahui pengaruh perubahan iklim terhadap hasil panen padi.
 
 Pengujian adalah bagian dari laporan proyek akhir sarjana terapan yang menjabarkan tentang evaluasi dari hasil yang didapat dari pelaksanaan penelitian. Pengujian dilakukan dengan menggunakan metode statistik yang sesuai dengan desain penelitian yang digunakan.
 
@@ -16,59 +16,65 @@ Dalam laporan proyek akhir sarjana terapan yang meneliti pengaruh perubahan ikli
 
 Hasil dan pengujian dari laporan proyek akhir sarjana terapan harus diinterpretasikan dengan benar dan dibahas dalam konteks masalah yang diteliti dan tujuan penelitian. Selain itu, hasil dan pengujian juga harus dibandingkan dengan hasil penelitian sebelumnya untuk mengetahui keterkaitan dengan penelitian yang telah dilakukan sebelumnya dan memberikan kontribusi baru dalam bidang penelitian terkait.
 
-\subsection{Subsection 4.1.1}
+\subsection{Pembuatan Mekanik}
 Bagian ini digunakan apabila dibutuhkan, silahkan bisa ditambah atau dikurangi sesuai kebutuhan.
 
-\subsection{Subsection 4.1.2}
+\subsection{Pembuatan Sistem Elektonik}
 Bagian ini digunakan apabila dibutuhkan, silahkan bisa ditambah atau dikurangi sesuai kebutuhan.
 
-\subsection{Subsection 4.1.3}
+\subsection{Integrasi Sistem}
 Bagian ini digunakan apabila dibutuhkan, silahkan bisa ditambah atau dikurangi sesuai kebutuhan.
 
-\section{Section 4.2}
+\section{Pembuatan Program Sistem Robot Semprot}
 \noindent Hasil dan Pengujian
 
-\subsection{Subsection 4.2.1}
-Bagian ini digunakan apabila dibutuhkan, silahkan bisa ditambah atau dikurangi sesuai kebutuhan.
+\subsection{Pembuatan Dataset}
+Berdasarkan rancangan yang diusulkan, pembuatan \textit{dataset} dilakukan untuk keperluan pelatihan atau \textit{training} model \textit{YOLOv8}. \textit{Dataset} terdiri dari dua kelas yaitu: "track" dan "end-track". Akuisisi dataset berdasarkan dari citra yang dikumpulkan melalui gambar dan ekstrasi frame dari vidio. Langkah selanjutnya membuat anotasi citra sesuai dengan kelas yang ditentukan, tersedia berbagai fitur anotasi pada \textit{Roboflow} diantara yang digunakan \textit{Polygon Tool} dan \textit{Smart Polygon} seperti pada \cref{fig:anotasi} dibawah ini. Citra yang sudah dianotasi kemudian dibagi menjadi tiga kategori yaitu: \textit{training, validation, dan test}.	   
 
-\subsection{Subsection 4.2.2}
-Bagian ini digunakan apabila dibutuhkan, silahkan bisa ditambah atau dikurangi sesuai kebutuhan.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.2]{Anotasi}
+	\caption{Anotasi Citra}
+	\label{fig:anotasi}
+\end{figure}
 
-\subsection{Subsection 4.2.3}
-Bagian ini digunakan apabila dibutuhkan, silahkan bisa ditambah atau dikurangi sesuai kebutuhan.
+Sesuai dengan rancangan, tahap selanjutnya dilakukan Preprocessing dan Augmentation. Proses Preprocessing yang diterapkan adalah resize semua dataset dengan ukuran pixel 416x416. Proses Augmentation yang diterapkan tersaji pada \cref{fig:datasetdetail}, proses Augmentation hanya berlaku pada dataset train sehingga menghasilkan pembagian \textit{dataset} dengan presentase train set 79\%, valid set 18\% , test set 4\% dari total 1160 citra. 
 
-\section{Section 4.3}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.3]{DatasetDetail}
+	\caption{Hasil Pembuatan Dataset}
+	\label{fig:datasetdetail}
+\end{figure}
+
+\subsection{Pembuatan Model YOLOv8}
+\subsection{Pembuatan Program Deteksi}
+\subsection{Pembuatan Fuzzy Logic Controller}
+
+
+
+\section{Pengujian}
 Hasil dan Pengujian
 
-\subsection{Subsection 4.4.1}
-Bagian ini digunakan apabila dibutuhkan, silahkan bisa ditambah atau dikurangi sesuai kebutuhan.
+\subsection{Catu Daya}
+\subsection{Pengujian Driver dan Motor}
+\subsection{Pengujian Radio Control}
+\subsection{Pengujian Webcam}
+\subsection{Pengujian Jetson Nano}
+\subsection{Pengujian Model YOLOv8}
 
-\subsection{Subsection 4.4.2}
-Bagian ini digunakan apabila dibutuhkan, silahkan bisa ditambah atau dikurangi sesuai kebutuhan.
+\begin{table}[]
+	\begin{tabular}{|c|c|cc|}
+		\hline
+		\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Pengujian \\ ke-\end{tabular}} & \multirow{2}{*}{Waktu (s)} & \multicolumn{2}{c|}{Convdence Score} \\ \cline{3-4} 
+		&  & \multicolumn{1}{c|}{track} & end-track \\ \hline
+		1 &  & \multicolumn{1}{c|}{}      &           \\ \hline
+		2 &  & \multicolumn{1}{c|}{}      &           \\ \hline
+		3 &  & \multicolumn{1}{c|}{}      &           \\ \hline
+		4 &  & \multicolumn{1}{c|}{}      &           \\ \hline
+	\end{tabular}
+\end{table}
 
-\subsection{Subsection 4.3.3}
-Bagian ini digunakan apabila dibutuhkan, silahkan bisa ditambah atau dikurangi sesuai kebutuhan.
+\subsection{Pengujian Fuzzy Logic Controller}
+\subsection{Pengujian Lapangan}
 
-\section{Section 4.4}
-Hasil dan Pengujian
-
-\subsection{Subsection 4.4.1}
-Bagian ini digunakan apabila dibutuhkan, silahkan bisa ditambah atau dikurangi sesuai kebutuhan.
-
-\subsection{Subsection 4.4.2}
-Bagian ini digunakan apabila dibutuhkan, silahkan bisa ditambah atau dikurangi sesuai kebutuhan.
-
-\subsection{Subsection 4.4.3}
-Bagian ini digunakan apabila dibutuhkan, silahkan bisa ditambah atau dikurangi sesuai kebutuhan.
-
-\section{Section 4.5}
-Hasil dan Pengujian
-
-\subsection{Subsection 4.5.1}
-Bagian ini digunakan apabila dibutuhkan, silahkan bisa ditambah atau dikurangi sesuai kebutuhan.
-
-\subsection{Subsection 4.5.2}
-Bagian ini digunakan apabila dibutuhkan, silahkan bisa ditambah atau dikurangi sesuai kebutuhan.
-
-\subsection{Subsection 4.5.3}
-Bagian ini digunakan apabila dibutuhkan, silahkan bisa ditambah atau dikurangi sesuai kebutuhan.
