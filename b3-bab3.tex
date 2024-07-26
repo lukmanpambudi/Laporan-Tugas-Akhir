@@ -3,121 +3,65 @@
 % Silahkan edit sesuai kebutuhan, baik menambah atau mengurangi \section, \subsection
 %==================================================================
 
-\chapter[KONSEP RANCANGAN / PRODUK / JASA / EVALUASI / PENGUJIAN]{\\ KONSEP RANCANGAN / PRODUK / JASA / EVALUASI / PENGUJIAN}
+\chapter[KONSEP RANCANGAN / PRODUK / JASA / EVALUASI / PENGUJIAN]{\\ KONSEP RANCANGAN PRODUK DAN PENGUJIAN}
 
 \section{Waktu dan Tempat Penelitian}
-Penelitian tugas akhir berjudul "Rancang Bangun Sistem Navigasi Otonom Pada Robot Semprot Pestisida menggunakan YOLOv8 dan Fuzzy Logic Controller" dimulai sejak bulan Juli hingga November
-2023. Penelitian ini dilaksanakan di Universitas Negeri Yogyakarta Kampus Wates, yang berada Kabupaten Kulon Progo, Daerah Istimewa Yogyakarta dan Dusun Terbah, Desa Terbah, Kecamatan Patuk, Kabupaten Gunungkidul, Daerah Istimewa Yogyakarta.
+Penelitian tugas akhir berjudul "Rancang Bangun Sistem Navigasi Otonom Pada Robot Semprot Pestisida menggunakan YOLOv8 dan Fuzzy Logic Controller" dimulai sejak bulan Juli hingga November 2023. Penelitian ini dilaksanakan di Universitas Negeri Yogyakarta Kampus Wates, yang berada Kabupaten Kulon Progo, Daerah Istimewa Yogyakarta dan Dusun Terbah, Desa Terbah, Kecamatan Patuk, Kabupaten Gunungkidul, Daerah Istimewa Yogyakarta.
 
 \section{Tahapan Penelitian}
-Pada penelitian ini terdapat terdapat tahapan yang digambarkan pada  \cref{fig:flowchart} flowchart pada dibawah ini. 
+Pada penelitian ini terdapat terdapat beberapa tahapan yang digambarkan pada  \cref{fig:flowchart} flowchart dibawah ini. 
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.6	]{tahap_penelitian}
+	\includegraphics[scale=0.6]{tahap_penelitian}
 	\caption{Flowchart Tahap Penelitian}
 	\label{fig:flowchart}
 \end{figure}
 
 \begin{packed_enum}
-	\item Studi Literatur: Pada tahap ini dilakukan pencarian dan analisis terhadap literatur yang relevan dengan topik atau latar belakang penelitian. Tujuan tahap ini bertujuan untuk menemukan dasar teori, memahami metode penelitian sebelumnya untuk dikembangkan sesuai topik penelitian, dan Mengumpulkan data dan bukti pendukung untuk mendukung argumen dan analisis dalam penelitian.
-	\item Identifikasi Kebutuhan: Identifikasi kebutuhan diperlukan untuk menganalisa dan mempersiapkan kebutuhan yang dibutuhkan pada penelitian. Pada tahap ini identifikasi kebutuhan dibagai menjadi 3 yaitu, identifikasi kubutuhan hardware, kebutuhan software, dan alat.
-	\item Perancangan Hardware dan Software: Tahap perancangan hardware dibagi menjadi 2 tahap yaitu perancangan mekanik dan elektronik. Perancangan mekanik dilakukan dengan pembuatan desain robot. Perancangan elektronik berupa arsitektur sistem robot. Sementara perancangan software adalah persiapan pemasangan library yang dibutuhkan pada saat proses inference NVDIA Jetson Nano.
-	\item Implementasi: tahap ini merupakan kegiatan pembuatan hardware robot sesuai dengan desain yang sudah ditentukan menggunakan kebutuhan bahan dan alat yang sudah disiapkan. sementara implementasi software meliputi pelatihan model, pembuatan kode program yang diperlukan.
-	\item Integrasi Sistem: Pada tahap ini rancangan hardware dan software digabungkan agar dapat saling berkomunikasi. Pengujian ini juga bertujuan untuk mengetahui sistem kerja, fungsional dan keamanan sistem.
-	\item Pengujian Sistem: Tahap pengujian dilakukan untuk mengetahui dan memastikan bahwa sistem pada robot dapat bekerja dengan baik sesuai kebutuhan. 
+	\item Studi Literatur: Pada tahap ini dilakukan pencarian dan analisis terhadap literatur yang relevan dengan topik atau latar belakang penelitian. Tahap ini bertujuan untuk menemukan dasar teori, memahami metode penelitian sebelumnya untuk dikembangkan sesuai topik penelitian, Mengumpulkan data dan bukti pendukung untuk mendukung argumen dan analisis dalam penelitian.
+	\item Identifikasi Kebutuhan: Identifikasi kebutuhan diperlukan untuk menganalisa dan mempersiapkan kebutuhan yang dibutuhkan pada penelitian. Pada tahap ini identifikasi kebutuhan dibagai menjadi 3 yaitu: kubutuhan hardware, kebutuhan software, dan alat.
+	\item Perancangan Hardware dan Software: Tahap Rancangan hardware dibagi menjadi dua yaitu rancangan mekanik dan elektronik. Rancangan mekanik maupun elektronik dilakukan dengan menggunakan perangkat lunak CAD (Computer-Aided Design) dan KiCad. Rancangan elektronik meliputi pemasangan atau pemenuhan dependencies library yang dibutuhkan oleh sistem.
+	\item Integrasi Sistem: merupakan proses menggabungkan sistem hardware dab software yang telah dirancang dan dikembangkan secara terpisah menjadi satu kesatuan yang dapat berfungsi penuh.
+	\item Pengujian Sitem: proses mengevaluasi sistem yang telah diintegrasikan untuk memastikan komponen berfungsi sesuai dengan spesifikasi dan persyaratan yang telah ditentukan.
 \end{packed_enum}
 
 \section{Identifikasi Kebutuhan}
 Tahap penelitian setelah melakukan studi literatur adalah identifikasi kebutuhan untuk memenuhi kebutuhan sumber daya yang diperlukan sesuai dengan yang dibutuhkan. Identifikasi kebutuhan pada penelitian ini terbagi menjadi 3, yaitu kebutuhan hardware pada \cref{tab:kebutuhanhardware}, kebutuhan software pada \cref{tab:kebutuhan-soft}, dan kebutuhan alat \cref{tab:kebutuhan-alat}
 
-\subsection{Kebutuhan Hardware}
-% \usepackage{array}
-% \usepackage{longtable}
+\subsection{Kebutuhan Hardware Mekanik}
+\begin{packed_item}
+	\item Aluminium Profile: Menggunakan aluminium rofile ukuran 3030 dalam pembuatan rangka utama robot, dan ukuran 2020 untuk kerangka penunjang seperti sistem pada penyemprotan. Material ini dipilih karena ringan, tahan korosi dan mudah dibentuk sesuai kebutuhan.  
+	\item Sistem Roda: Menggunakan 4 Roda utama sebagai penggerak, roda menggunakan ban dalam dan luar ATV Ring 6 - 4.10 offroad, Velg ATV Ring 6. Komponen-komponen penggerak tersebut dipilih karena dapat memberikan mobilitas yang baik di medan berupa tanah.
+	\item Gear dan Rantai: Menggunakan gear Motor Mini GP - 51T dan Rantai Mini GP 25H, material tersebut dipilih untuk mentrasnmisikan daya yang dihasilkan motor DC.
+	\item Junction Box PVC:  terbuat dari bahan polivinil klorida (PVC) yang digunakan untuk menyimpan dan melindungi  komponen-komponen elektronik dari debu dan air.
+\end{packed_item}
 
-
-\begin{longtable}{|>{\hspace{0pt}}m{0.046\linewidth}|>{\hspace{0pt}}m{0.25\linewidth}|>{\hspace{0pt}}m{0.627\linewidth}|}
-	\caption{Kebutuhan \textit{Hardware}\label{tab:kebutuhanhardware}}\\
-	\hline
-	\multicolumn{1}{|>{\centering\hspace{0pt}}m{0.042\linewidth}|}{\textbf{No}} & \multicolumn{1}{>{\centering\hspace{0pt}}m{0.271\linewidth}|}{\textbf{Nama Hardware}} & \multicolumn{1}{>{\centering\arraybackslash\hspace{0pt}}m{0.627\linewidth}|}{\textbf{Keterangan}}                                              \endfirsthead 
-	\hline
-	\multicolumn{3}{|>{\centering\arraybackslash\hspace{0pt}}m{0.94\linewidth}|}{\textbf{Komponen Mekanik Robot}}                                                                                                                                                                                                        \\ 
-	\hline
-	1                                                                           & Aluminium profile 3030                                                                & Digunakan untuk membuat rangka bagian bawah\par{}atau rangka utama.                                                                            \\ 
-	\hline
-	2                                                                           & Aluminium profile 2020                                                                & Digunakan untuk membuat rangka bagian atas.                                                                                                    \\ 
-	\hline
-	3                                                                           & Besi As                                                                               & Memiliki panjang 500mm dan diameter 20mm.\par{}berfungsi sebagai struktur utama yang menahan\par{}berat robot dan beban muatannya.             \\ 
-	\hline
-	4                                                                           & Bracket corner aluminium                                                              & Berfungsi untuk menopang atau memperkuat\par{}sudut pada sebuah struktur.                                                                      \\ 
-	\hline
-	5                                                                           & Rantai Mini GP 25H TEBAL-\par{}HEAVY DUTY                                             & Memiliki fungsi utama mentransmisikan daya\par{}dari motor dc ke roda robot.                                                                   \\ 
-	\hline
-	6                                                                           & Gear Mini GP - 51T                                                                    & Kompenen penggerak roda, dan berfungsi untuk\par{}mentransmisikan daya dari motor dc.                                                          \\ 
-	\hline
-	7                                                                           & Velg ATV Ring 6 Inch                                                                  & Sebagai komponen penggerak robot.                                                                                                              \\ 
-	\hline
-	8                                                                           & Ban Luar ATV Ring 6 - 4.10\par{}offroad dan ban dalam ATV\par{}ing 6 ukuran 4.10-6.   & Sebagai komponen penggerak robot.                                                                                                              \\ 
-	\hline
-	9                                                                           & Junction Box PVC (200mm\par{}x 120mm x 75mm)                                          & Berfungsi sebagai tempat penyimpanan komponen\textbackslash{}\textbackslash{} elektronik.                                                      \\ 
-	\hline
-	10                                                                          & Kabel Gland\par{}(Diameter 5-10mm)                                                    & Sebagai pengaman kabel yang masuk ke dalam\par{}Junction Box PVC.                                                                              \\ 
-	\hline
-	11                                                                          & Jerigen 20L                                                                           & Berfungsi untuk menampung pestisida.                                                                                                           \\ 
-	\hline
-	12                                                                          & Selang                                                                                & Berfungsi untuk membagi dan menyalurkan cairan\par{}pestisida ke sprayer.                                                                      \\ 
-	\hline
-	13                                                                          & Nozzle Sprayer                                                                        & Berfungsi mendistribusikan cairan pestisida\par{}secara merata dan efisien.                                                                    \\ 
-	\hline
-	\multicolumn{3}{|>{\centering\arraybackslash\hspace{0pt}}m{0.94\linewidth}|}{\textbf{Komponen Elektronik Robot}}                                                                                                                                                                                                     \\ 
-	\hline
-	14                                                                          & Motor DC MY1016Z\par{}250W 24V                                                        & Sebagai komponen penggerak utama untuk\par{}menggerakkan robot.                                                                                \\ 
-	\hline
-	15                                                                          & Baterai Pack LiFePO4\par{}24V 20Ah                                                    & Sebagai sumber daya untuk motor dc                                                                                                             \\ 
-	\hline
-	16                                                                          & Baterai Lifepo4 12V                                                                   & Sebagai sumber daya komponen utama elektronik.                                                                                                 \\ 
-	\hline
-	17                                                                          & ACCU/Aki Kering                                                                       & Sebagai sumber daya pompa 12V.                                                                                                                 \\ 
-	\hline
-	18                                                                          & ESP32 Devkit-V1                                                                       & Sebagai mikrokontroller yang mengendalkan\par{}seluruh operasi robot dan yang utama untuk\par{}mengendalikan kecepatan motor dc.               \\ 
-	\hline
-	19                                                                          & Driver Motor IBT-2~\par{}BTS 7960                                                     & Berfungsi untuk mengatur kecepatan motor dc.                                                                                                   \\ 
-	\hline
-	20                                                                          & NVIDIA Jetson Nano                                                                    & Sebagai platform yang digunakan untuk melakukan\par{}proses image processing.                                                                  \\ 
-	\hline
-	21                                                                          & Relay                                                                                 & Digunakan untuk mengendalikan arus yang masuk\par{}ke pompa 12V.                                                                               \\ 
-	\hline
-	22                                                                          & Pompa 12V                                                                             & Digunakan untuk menciptakan aliran fluida atau\par{}menggerakkan cairan dari jerigen ke nozzle sprayer.                                        \\ 
-	\hline
-	23                                                                          & USB Webcam 2K                                                                         & \}Berfungsi untuk mendeteksi objek dan\par{}lingkungan sekitar robot untuk diproses \textbackslash{}\textbackslash{} pada NVIDIA Jetson Nano.  \\ 
-	\hline
-	24                                                                          & MicroSD 128GB                                                                         & Digunakan sebagi media penyimpanan data\par{}yang diperlukan NVIDIA Jetson Nano.                                                               \\
-	\hline
-\end{longtable}
-
+\subsection{Kebutuhan Hardware Elektronik}
+\begin{packed_item}
+	\item Motor DC  MY1016Z 250W 24V
+	\item Driver BTS7960: Driver motor ini dipilih karena dapat mengendalikan motor DC dengan arus maksimum 43A dan tegangan 5V - 27V. Selain itu  Driver BTS7960 mempunyai mode operasi H-bridge yang memungkinkan untuk mengendalikan arah dan kecepatan motor menggunakan sinyal PWM. 
+	\item Baterai LiFePO4 24V 20Ah dan LiPO 11.1V 3300Ah
+	\item ESP32 DevKit V1: merupakan board pengembangan berbasis mikrokontroler, digunakan karena memiliki banyak pin I/O dan kemampuan ADC, sehingga dapat terhubung dengan berbagai sensor atau modul. 
+	\item NVIDIA Jetson Nano: merupakan board pengembangan kecil, dipilih karena kemampuanya dibidang AI. Selain itu NVIDIA Jetson Nano mampu memproses data seperti sistem deteksi YOLO.
+	\item  USB Webcam Fantech Luminous C30: Dipilih karena mempunyai fitur resolusi video yang cukup baik, sehingga cukup baik  digunakan pada robot semprot untuk menangkap video secara real-time.
+\end{packed_item}
 
 \subsection{Kebutuhan Software}
-
-\begin{table}[H]
-	\caption{Kebutuhan Software}
-	\label{tab:kebutuhan-soft}
-	\centering
-	\begin{tabular}{|l|l|l|}
-		\hline
-		\multicolumn{1}{|c|}{\textbf{No}} &
-		\multicolumn{1}{c|}{\textbf{Nama Software}} &
-		\multicolumn{1}{c|}{\textbf{Keterangan}} \\ \hline
-		1 &
-		Autodesk Inventor &
-		\begin{tabular}[c]{@{}l@{}}Software yang berfungsi untuk membuat\\ mekanik berupa desain 3D robot.\end{tabular} \\ \hline
-		2 & Arduino IDE & \begin{tabular}[c]{@{}l@{}}Digunakan untuk memprogram dan mengembangkan\\ proyek dengan papan  mikrokontroler Arduino \\ dengan bahasa C++.\end{tabular} \\ \hline
-		3 &
-		Visual Studio Code &
-		\begin{tabular}[c]{@{}l@{}}Sebagai software untuk mengembangkan program \\ Mask R-CNN.\end{tabular} \\ \hline
-	\end{tabular}
-\end{table}
+\begin{packed_item}
+	\item Visual Studio Code: Penggunaan  Visual Studio Code karenan mempunyai dukungan multi bahasa pemrograman, terintegrasi dengan terminal, sehingga teks iditor ini dapat digunakan untuk mengembangkan sistem pada robot. 
+	\item Arduino IDE: Autodesk Inventor adalah perangkat lunak CAD (Computer-Aided Design) yang digunakan untuk merancang dan memodelkan komponen robot dan sistem mekanis secara detail. Dengan fitur pemodelan 3D yang canggih, Autodesk Inventor memungkinkan pengguna untuk membuat desain yang akurat dan terperinci dari komponen mekanis serta rakitan. Perangkat lunak ini mendukung pembuatan model 3D, simulasi, dan analisis, sehingga mempermudah proses perancangan dan memastikan bahwa desain robot dapat diimplementasikan dengan presisi yang tinggi.
+	\item Remmina
+\end{packed_item}
 
 \subsection{Kebutuhan Alat}
+\begin{packed_item}
+	\item Laptop
+	\item Meisn Gerinda Potong  
+	\item Solder
+	\item Multimeter
+	\item Obeng Set Toolkit
+\end{packed_item}
 
 \begin{table}[H]
 	\caption{Kebutuhan Alat}
