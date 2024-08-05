@@ -27,11 +27,11 @@ Pada penelitian ini terdapat terdapat beberapa tahapan yang digambarkan pada  \c
 \end{packed_enum}
 
 \section{Identifikasi Kebutuhan}
-Tahap penelitian setelah melakukan studi literatur adalah identifikasi kebutuhan untuk memenuhi kebutuhan sumber daya yang diperlukan sesuai dengan yang dibutuhkan. Identifikasi kebutuhan pada penelitian ini terbagi menjadi 3, yaitu kebutuhan hardware pada \cref{tab:kebutuhanhardware}, kebutuhan software pada \cref{tab:kebutuhan-soft}, dan kebutuhan alat \cref{tab:kebutuhan-alat}
+Tahap penelitian setelah melakukan studi literatur adalah identifikasi kebutuhan untuk memenuhi kebutuhan sumber daya yang diperlukan sesuai dengan yang dibutuhkan. Identifikasi kebutuhan pada penelitian ini terbagi menjadi 3: yaitu kebutuhan hardware, software dan kebutuhan alat.
 
 \subsection{Kebutuhan Hardware Mekanik}
 \begin{packed_item}
-	\item Aluminium Profile: Menggunakan aluminium rofile ukuran 3030 dalam pembuatan rangka utama robot, dan ukuran 2020 untuk kerangka penunjang seperti sistem pada penyemprotan. Material ini dipilih karena ringan, tahan korosi dan mudah dibentuk sesuai kebutuhan.  
+	\item Aluminium Profile: Menggunakan aluminium profile ukuran 3030 dalam pembuatan rangka utama robot, dan ukuran 2020 untuk kerangka penunjang seperti sistem pada penyemprotan. Material ini dipilih karena ringan, tahan korosi dan mudah dibentuk sesuai kebutuhan.  
 	\item Sistem Roda: Menggunakan 4 Roda utama sebagai penggerak, roda menggunakan ban dalam dan luar ATV Ring 6 - 4.10 offroad, Velg ATV Ring 6. Komponen-komponen penggerak tersebut dipilih karena dapat memberikan mobilitas yang baik di medan berupa tanah.
 	\item Gear dan Rantai: Menggunakan gear Motor Mini GP - 51T dan Rantai Mini GP 25H, material tersebut dipilih untuk mentrasnmisikan daya yang dihasilkan motor DC.
 	\item Junction Box PVC:  terbuat dari bahan polivinil klorida (PVC) yang digunakan untuk menyimpan dan melindungi  komponen-komponen elektronik dari debu dan air.
@@ -51,54 +51,22 @@ Tahap penelitian setelah melakukan studi literatur adalah identifikasi kebutuhan
 \begin{packed_item}
 	\item Visual Studio Code: Penggunaan  Visual Studio Code karenan mempunyai dukungan multi bahasa pemrograman, terintegrasi dengan terminal, sehingga teks iditor ini dapat digunakan untuk mengembangkan sistem pada robot. 
 	\item Arduino IDE: Autodesk Inventor adalah perangkat lunak CAD (Computer-Aided Design) yang digunakan untuk merancang dan memodelkan komponen robot dan sistem mekanis secara detail. Dengan fitur pemodelan 3D yang canggih, Autodesk Inventor memungkinkan pengguna untuk membuat desain yang akurat dan terperinci dari komponen mekanis serta rakitan. Perangkat lunak ini mendukung pembuatan model 3D, simulasi, dan analisis, sehingga mempermudah proses perancangan dan memastikan bahwa desain robot dapat diimplementasikan dengan presisi yang tinggi.
-	\item Remmina
+	\item Remmina: Merupakan remote desktop client open source yang berjalan di platform Linux. Software ini dipilih karena mendukung beberapa protokol jaringan untuk menghubungkan dan memanajemen desktop jarak jauh termasuk RDP (Remote Desktop Protocol), SSH (Secure Shell) sehingga software ini  merupakan pilihan yang tepat untuk memanejemen NVIDIA Jetson Nano.
 \end{packed_item}
 
-\subsection{Kebutuhan Alat}
 \begin{packed_item}
-	\item Laptop
-	\item Meisn Gerinda Potong  
-	\item Solder
-	\item Multimeter
-	\item Obeng Set Toolkit
+	\item Laptop: Laptop merupakan alat utama yang digunakan untuk mengembangkan robot semprot. Laptop digunakan untuk mendesain mekanik dan software robot agar dapat instegrasi sesuai dengan sepesifikasi dan fungsi yang telah ditentukan.
+	\item Meisn Gerinda Potong: Mesin Gerinda yang digunakan adalah mesin gerinda duduk. Mesin gerinda ini digunakan untuk memotong aluminium profile dengan hasil yang presesi dan sesuai ukuran.
+	\item Solder: Digunakan untuk proses wiring pada sistem elektronik.
+	\item Multimeter: Alat ukur ini digunakan untuk mengecek sistem elektronik dari aspek keamanan dan untuk mengukur parameter-parameter elektronik sesuai dengan spesifikasi yang telah ditentukan.
+	\item Obeng Set Toolkit: Toolkit ini digunakan untuk membantu pembuatan sistem mekanik dan elektronik .
 \end{packed_item}
-
-\begin{table}[H]
-	\caption{Kebutuhan Alat}
-	\label{tab:kebutuhan-alat}
-	\centering
-	\begin{tabular}{|l|l|l|}
-		\hline
-		\multicolumn{1}{|c|}{\textbf{No}} &
-		\multicolumn{1}{c|}{\textbf{Nama Alat}} &
-		\multicolumn{1}{c|}{\textbf{keterangan}} \\ \hline
-		1 &
-		Laptop &
-		\begin{tabular}[c]{@{}l@{}}Digunakan untuk melakukan perancangan secara\\ keseluruhan (hardware dan software).\end{tabular} \\ \hline
-		2 &
-		\begin{tabular}[c]{@{}l@{}}Mesin pemotong besi\\ dan kikir\end{tabular} &
-		\begin{tabular}[c]{@{}l@{}}Digunakan untuk mempermudah pemotongan \\ aluminium profile sesuai kebutuhan.\end{tabular} \\ \hline
-		3 &
-		\begin{tabular}[c]{@{}l@{}}Solder, timah, dan \\ aktraktor\end{tabular} &
-		\begin{tabular}[c]{@{}l@{}}Peralatan digunakan untuk membuat dan \\ mengembangkan komponen elektronik.\end{tabular} \\ \hline
-		4 &
-		Multimeter &
-		\begin{tabular}[c]{@{}l@{}}Digunakan untuk mengukur nilai dan mengecek\\ pada komponen elektronik robot.\end{tabular} \\ \hline
-		5 &
-		Mesin bor tangan &
-		\begin{tabular}[c]{@{}l@{}}Digunakan untuk mebuat lubang terutama \\ pada frame robot, dan lain-lain.\end{tabular} \\ \hline
-		6 &
-		Tang &
-		\begin{tabular}[c]{@{}l@{}}Sebagai alat perkakas, mempermudah pemotongan\\ kabel dan lain-lain.\end{tabular} \\ \hline
-	\end{tabular}
-\end{table}
 
 \section{Rancangan Hardware}
-Tahap rancangan hardware pada penelitian ini dibagi menjadi 2, yaitu rancangan mekanik berupa desain robot, dan rancangan elektronik berupa desain atau rancangan arsitektur sistem.
+Tahap rancangan hardware pada penelitian ini dibagi menjadi dua bagian utama. Rancangan mekanik yang mencakup desain fisik robot, termasuk struktur, sasis, dan mekanisme gerakannya. Rancangan elektronik yang meliputi desain arsitektur sistem, mencakup komponen-komponen elektronik seperti mikrokontroler, sensor, aktuator, dan sistem komunikasi. Kombinasi kedua rancangan ini diharapkan menghasilkan robot sesuai dengan fungsional.
 
 \subsection{Rancangan Mekanik}
-Rancangan mekanik robot menggunakan software AutoDesk Inventor untuk merancang dan membuat desain 3D robot. Pada \cref{fig:mekanik-utama} Robot menggunakan bahan alumunium profile berukuran 30x30  sebagai bahan utama frame robot, dan alumunium profile berukuran 20x20 sebagai bahan penunjang frame seperti bagian tiang sprayer dan bagian tempat jerigen. Dimensi robot memiliki panjang 750mm dan lebar 600mm. Frame utama robot menggunakan aluminium profile 30x30 (30mm x 30mm), dipilih sebagai bahan utama frame karena mempunyai kemampuan untuk menopang beban berat, kuat, dan beratnya yang ringan. Aluminium profile juga tahan karat, mudah untuk dirangkai sesuai ukuran dan kebutuhan robot.
-
+Rancangan mekanik merupakan proses perencanaan dan desain yang berfokus pada aspek fisik dan struktural robot. Pada \cref{fig:mekanik-utama} di bawah ini ditunjukkan desain dari robot semprot yang dibuat menggunakan Autodesk Inventor. Struktur atau rangka utama robot menggunakan aluminium profil dengan ukuran 30x30 mm, sementara aluminium profil dengan ukuran 20x20 mm digunakan untuk rangka penunjang seperti tiang sprayer dan tempat jerigen. Robot ini memiliki dimensi panjang 750 mm dan lebar 600 mm, serta dilengkapi dengan empat roda penggerak. Pergerakan robot dihasilkan oleh dua motor DC dengan daya 250W dan tegangan 24V, yang memungkinkan robot untuk bergerak dengan stabil dan efisien. Untuk bekerja di medan tanah, robot menggunakan empat roda utama sebagai penggerak. Roda tersebut menggunakan ban dalam dan luar ATV Ring 6 - 4.10 offroad dengan velg ATV Ring 6.
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.4]{main_mekanik}
@@ -106,10 +74,10 @@ Rancangan mekanik robot menggunakan software AutoDesk Inventor untuk merancang d
 	\label{fig:mekanik-utama}
 \end{figure}
 
-Aluminium profile 20x20 (20mm x 20mm) digunakan untuk bahan frame penunjang seperti tiang sprayer dan frame tempat jerigen. Aluminium profile 20x20 dipilih karena ukuranya yang sesuai kebutuhan yaitu tidak memerlukan ukuran yang terlalu besar. Terdiri dari 2 tinag sprayer, mempunyai ketinggan minimum 75mm dan maksimum 200mm yang dapat diatur ketinggianya sesuai kebutuhan. Robot ini mempunayi total 4 nozzle sprayer,  setiap tiang sprayer terdapat 2 nozzle yang terintegrasi dengan jerigen penampungan pestisida. Pada penelitian ini robot menggunakan 2 Motor DC MY1016Z-250W 24V untuk menggerakkan 4 roda sebagai penggerak utama, dimana setaip roda belakan dan depan terhubung dengan rantai untuk menghindari slip di tanah.
+Robot didesain mempunyai tiang sprayer dengan tinggi 75 hingga 200 cm dengan total empat nozzle dua nozzle di sisi kanan dan kiri. Cairan pestisida yang ditampung di jerigen disalurkan menuju sprayer menggunakan pompa dan selang pneumatic. Robot dilengkapi dengan junction box untuk menyimpan dan melindungi komponen-komponen elektronik dari debu dan air.
 
 \subsection{Rancangan Elektronik}
-Pada \cref{fig:arsitektur-diagram} dibawah ini adalah Arsitektur sistem elektronik yang merujuk pad struktur keseluruhan dari komponen-komponen elektronik yang membentuk sebuah sistem. Arsitektur sistem rancangan elektronik mencangkup perancangan dan pengaturan bagaimana komponen-komponen tersebut saling berinteraksi dan berkomunikasi satu sama lain untuk mencapai fungsi-fungsi tertentu. 
+Rancangan elektronik robot semprot terdiri dari mikrokontroler, sensor, dan aktuator. Berdasarkan \cref{fig:arsitektur-diagram} terdapat power supply dari Baterai LiFePO4 24V 20Ah sebagi sumber tegangan utama untuk Motor DC, dan juga sumber tegangan untuk komponen-komponen elektronik. ESP32 sebagai mikrokontroler utsms menerima dan mengirimkan data, Jetson Nano yang terhubung denegan ESP32 melalui port USB untuk komunikasi serial. ESP32 juga terhubung dengan Receiver Ibus dari Radio Control. ESP32 pada rancangan elektronik robot semprot digunakan untuk memproses data pengolahan citra sebagi input untuk Fuzzy Logic Controller, output deffuzy berupa nilai PWM yang akan menggerak Motor DC. 
 
 \begin{figure}[H]
 	\centering
@@ -117,13 +85,27 @@ Pada \cref{fig:arsitektur-diagram} dibawah ini adalah Arsitektur sistem elektron
 	\caption{Gambar Arsitektur Rancangan Elektronik}
 	\label{fig:arsitektur-diagram}
 \end{figure}
-
-Pada penelitian ini arsitektur sistem dibagai menjadi 3 bagaian. Bagian pertama adalah power source, bagian ini terdiri dari beberapa sumber daya atau supply untuk komponen elektronik. Bagaian arsitektur power source terdiri dari 3 battery antara lain, Accu 12V 5Ah digunakan untuk memberikan daya pada pompa pada bagian sistem sprayer. LiFePo 24V 2Ah berfungsi untuk memberikan daya pada Motor DC MY1016Z-250W 24V. Yang ketiga Li-Po battery 11.1V 3.3A, battery ini diturunkan menggunakan Ubec 5V 3A digunakan sebagai sumber daya untuk ESP32 DevKit V1. 
-
-Bagaian kedua arsitektur sistem pada penelitian ini adalah image processing system yang terdiri dari NVDIA Jetson Nano dan WebCam. NVDIA Jetson nano merupakan unit utama yang berfungsi untuk melakukan proses image processing dan Webcam sebagai input untuk merekam keadaan lingkungan sekitar robot. NVIDIA Jetson Nano disupply tegangan sebesar 5V 4A. Arsitekstur bagaian ketiga adalah Control System, terdiri dari ESP32 DevKit V1 sebagai mikrokontroller yang terhubung dengan NVIDIA Jetson Nano melalui komunikasi serial. ESP32 DevKit V1 diprogram menggunakan bahasa pemrograman C untuk menerima data dan mmemberikan kotrol pada aktuaktor seperti motor dc dan pompa. 
-
+ 
 \section{Rancangan Software}
-Perancangan software atau perangkat lunak  dalam penelitian ini memiliki peranan yang krusial dalam memaksimalkan kemampuan dan proses pada perangkat keras yang digunakan. Ini disebabkan karena perangkat lunak yang dirancang secara cermat akan dapat mengoptimalkan fitur-fitur dan sumber daya yang tersedia pada perangkat keras sehingga membutuhkan beberapa library sebagai berikut:
+Perancangan perangkat lunak dalam penelitian ini memiliki peranan penting dalam memaksimalkan kemampuan dan kinerja perangkat keras yang digunakan. Dengan merancang perangkat lunak yang andal, robot semprot dapat beroperasi secara lebih efektif, aman, dan efisien, sehingga siap untuk beroperasi di lapangan.
+
+\subsection{Rancangan Diagram Alir Program}
+Pada rancangan diagram alir program (\textit{flowchart}) sangat penting dalam pengembangan software dan sistem. Diagram alir program digunakan dalam perancangan, pengembangan, dan komunikasi. Rancangan diagram alir pada sistem robot semprot dapat diamati pada gambar dibawah ini.
+ 
+\subsection{Rancangan Fuzzy Logic Controller}
+Rancangan fuzzy Logic Contrroler mempunyai peranan penting dalam navigasi robot semprot karena kemampuannya untuk menangani ketidakpastian dan variabilitas dalam lingkungan yang dinamis. Rancangan fuzzy Logic Controller menggunakan metode pendekatan mamdani seperti pada gambar dibawah ini dengan bantuan Matlab. Fuzzy Logic Controller terdiri dari dua input dan output, input terdiri dari error, delta error serta output berupa nilai duty cycle motor kanan dan kiri. Nilia error diperoleh dari hasil perhitungan pixel model deteksi YOLOv8, delta error diperolah dari selisih antara nilai error aktual dengan error sebelumnya. 
+
+
+\begin{packed_enum}
+	\item Fuzzifikasi: Fuzzifikasi adalah proses mengubah input numerik (crisp) menjadi himpunan fuzzy. Pada tahap ini nilai input error dan delta error diubah menjadi nilai keanggotaan yang terdiri dari "KiriTajam", "Kiri", "Lurus", "Kanan", dan "KananTajam".  seperti pada gambar dibawah ini. Proses fuzzifikasi menggunakan fungsi keanggotaan untuk mentukan derajat keanggotaan nilai error dan delta error dalam setiap himpunan fuzzy yang relevan.
+	
+	\item Basis Aturan Fuzzy: Aturan fuzzy atau rule fuzzy merupakan kumpulan aturan if-then yang menentukan hubungan antara himpunan fuzzy input dan output.  Setiap rule fuzzy logic berbentuk "jika kondisi, maka aksi" seperti pada gambar dibawah ini. Aturan yang digunakan pada sistem robot semprot memiliki total 25 aturan dengan lima kondisi berbeda yaitu aturan untuk "Kiri Tajam", "Kiri", "Lurus", "Kanan", "Kanan Tajam".
+	\item Defuzzifikasi: berfungsi untuk mengubah keluaran fuzzy yang dihasilkan oleh proses agregasi menjadi nilai numerik (crisp) berupa duty cycle. Duty Cycle terdiri dari "Pelan", "Sedang", dan "Cepat".
+\end{packed_enum}	
+
+\section{Rancangan Computer Vision}
+Rancangan computer\textit{ vision} pada sistem robot semprot ini merupakan pembuatan model deteksi YOLOv8.
+\subsection{Rancangan YOLOv8}
 
 \begin{packed_enum}
 	\item OpenCV: merupakan library perangkat lunak open source yang dikhususkan untuk pengolahan gamabar dan visual komputer. OpenCV menyediakan berbagai fungsi dan algoritma yang digunakan untuk mendeteksi dan mengenali objek, melakukan analisa gambar dan mengolah vidio. OpenCV juga memiliki integrasi dengan berbagai algoritma kecerdasan buatan, seperti machine learning dan pengenalan pola, yang memungkinkan aplikasi untuk melakukan tugas-tugas yang lebih kompleks.
